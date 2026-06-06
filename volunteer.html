@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Volunteer With Us | Noodle’s Canine Rescue IOM - Charity No. 1387</title>
+    <meta name="description" content="Join Noodle’s Canine Rescue IOM as a volunteer. Help find missing dogs on the Isle of Man using thermal drones, ground searches and scent dogs. Full training provided.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body class="bg-white font-sans text-gray-700">
+
+    <!-- Consistent Navigation -->
+    <nav class="bg-white border-b border-gray-100 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-5">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <div class="flex items-center gap-x-3">
+                    <img src="ncr-logo.png" alt="Noodle’s Canine Rescue Logo" class="h-10 w-auto">
+                    <div>
+                        <div class="font-semibold text-lg tracking-tight text-[#4A1C6B]">Noodle’s Canine Rescue</div>
+                        <div class="text-[9px] text-gray-500 -mt-1">ISLE OF MAN • CHARITY NO. 1387</div>
+                    </div>
+                </div>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center gap-x-7 text-sm font-medium">
+                    <a href="index.html" class="nav-link text-gray-700">Home</a>
+                    <a href="about.html" class="nav-link text-gray-700">About Us</a>
+                    <a href="k9-first-aid.html" class="nav-link text-gray-700">K9 First Aid</a>
+                    <a href="report-missing-dog.html" class="nav-link text-gray-700">Report Missing Dog</a>
+                    <a href="news.html" class="nav-link text-gray-700">News &amp; Updates</a>
+                    <a href="volunteer.html" class="nav-link text-[#C62828] font-semibold">Volunteer Today</a>
+                </div>
+
+                <div class="flex items-center gap-x-3">
+                    <a href="volunteer.html" class="px-5 py-2 text-sm font-semibold rounded-2xl bg-[#C62828] text-white hover:bg-[#a81f1f] transition-colors">
+                        Volunteer Today
+                    </a>
+                    <button id="burger-btn" class="md:hidden w-10 h-10 flex items-center justify-center text-gray-600">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+            <div class="px-5 py-4 flex flex-col gap-y-2 text-sm font-medium">
+                <a href="index.html" class="py-2 text-gray-700">Home</a>
+                <a href="about.html" class="py-2 text-gray-700">About Us</a>
+                <a href="k9-first-aid.html" class="py-2 text-gray-700">K9 First Aid</a>
+                <a href="report-missing-dog.html" class="py-2 text-gray-700">Report Missing Dog</a>
+                <a href="news.html" class="py-2 text-gray-700">News &amp; Updates</a>
+                <a href="volunteer.html" class="py-2 text-[#C62828] font-semibold">Volunteer Today</a>
+                <div class="pt-3 border-t">
+                    <a href="volunteer.html" class="py-2 text-[#C62828] font-semibold">Join Our Team</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <script>
+        const burgerBtn = document.getElementById('burger-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        burgerBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            const icon = burgerBtn.querySelector('i');
+            if (mobileMenu.classList.contains('hidden')) {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            } else {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+            }
+        });
+
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                const icon = burgerBtn.querySelector('i');
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            });
+        });
+    </script>
+
+    <!-- Hero Section -->
+    <div class="bg-[#F8F5F2] py-16">
+        <div class="max-w-4xl mx-auto px-5 text-center">
+            <div class="inline-flex items-center gap-x-2 bg-white text-[#4A1C6B] px-4 py-1 rounded-3xl text-sm font-semibold mb-4 border">
+                <i class="fa-solid fa-hands-helping"></i>
+                <span>JOIN OUR MISSION</span>
+            </div>
+            <h1 class="text-5xl tracking-tighter text-[#4A1C6B] font-semibold mb-4">Volunteer With Us</h1>
+            <p class="text-xl text-gray-600 max-w-2xl mx-auto">Help bring missing dogs home safely across the Isle of Man. No previous experience required — full training and support provided.</p>
+        </div>
+    </div>
+
+    <div class="max-w-5xl mx-auto px-5 py-14">
+
+        <!-- Introduction -->
+        <div class="prose prose-lg max-w-none mb-12">
+            <h2 class="text-3xl font-semibold text-[#4A1C6B]">Why Volunteer With Noodle’s Canine Rescue?</h2>
+            <p>Every year, dogs go missing on the Isle of Man — often in challenging coastal, rural or woodland terrain. Our volunteer team provides a vital, rapid response using thermal drones, systematic ground searches and trained scent dogs.</p>
+            <p>By joining us you become part of a compassionate, professional and growing community that makes a real, tangible difference to families and their beloved dogs. Whether you have a few hours a month or want to become a core team member, there is a role for you.</p>
+        </div>
+
+        <!-- Ways to Volunteer -->
+        <h2 class="text-3xl font-semibold text-[#4A1C6B] mb-8 text-center">Ways You Can Help</h2>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-14">
+            
+            <!-- Role 1 -->
+            <div class="bg-white border border-gray-200 rounded-3xl p-7 hover:border-[#4A1C6B] transition-colors">
+                <div class="w-12 h-12 bg-[#4A1C6B]/10 rounded-2xl flex items-center justify-center mb-5">
+                    <i class="fa-solid fa-walking text-3xl text-[#4A1C6B]"></i>
+                </div>
+                <h3 class="font-semibold text-xl mb-2">Ground Search Team</h3>
+                <p class="text-gray-600 text-sm mb-4">Join our trained volunteers who conduct systematic foot searches in all weathers and terrains. You will learn search patterns, navigation, radio communications and safe working practices. Ideal for those who enjoy the outdoors and working as part of a coordinated team.</p>
+                <div class="text-xs text-gray-500">Full training provided • Flexible commitment</div>
+            </div>
+
+            <!-- Role 2 -->
+            <div class="bg-white border border-gray-200 rounded-3xl p-7 hover:border-[#4A1C6B] transition-colors">
+                <div class="w-12 h-12 bg-[#4A1C6B]/10 rounded-2xl flex items-center justify-center mb-5">
+                    <i class="fa-solid fa-drone text-3xl text-[#4A1C6B]"></i>
+                </div>
+                <h3 class="font-semibold text-xl mb-2">Drone Observer / Support</h3>
+                <p class="text-gray-600 text-sm mb-4">Assist our qualified drone pilots during operations. Roles include acting as visual observer, helping with equipment, mapping support and coordinating with ground teams. Great opportunity to learn about thermal imaging technology and search coordination.</p>
+                <div class="text-xs text-gray-500">Training provided • Good for detail-oriented volunteers</div>
+            </div>
+
+            <!-- Role 3 -->
+            <div class="bg-white border border-gray-200 rounded-3xl p-7 hover:border-[#4A1C6B] transition-colors">
+                <div class="w-12 h-12 bg-[#4A1C6B]/10 rounded-2xl flex items-center justify-center mb-5">
+                    <i class="fa-solid fa-dog text-3xl text-[#4A1C6B]"></i>
+                </div>
+                <h3 class="font-semibold text-xl mb-2">Dog Handling Support</h3>
+                <p class="text-gray-600 text-sm mb-4">Support our K9 handlers and help with the care, training and welfare of our scent dogs (including Noodle, our collie in training). Opportunities range from general dog handling assistance to eventual handler training for suitable volunteers.</p>
+                <div class="text-xs text-gray-500">Animal lovers especially welcome</div>
+            </div>
+
+            <!-- Role 4 -->
+            <div class="bg-white border border-gray-200 rounded-3xl p-7 hover:border-[#4A1C6B] transition-colors">
+                <div class="w-12 h-12 bg-[#4A1C6B]/10 rounded-2xl flex items-center justify-center mb-5">
+                    <i class="fa-solid fa-clipboard-list text-3xl text-[#4A1C6B]"></i>
+                </div>
+                <h3 class="font-semibold text-xl mb-2">Logistics &amp; Operations Support</h3>
+                <p class="text-gray-600 text-sm mb-4">Help behind the scenes with equipment maintenance, vehicle support, mapping, communications, record keeping and organising community search days. Essential role that keeps our field teams effective and safe.</p>
+                <div class="text-xs text-gray-500">Flexible hours • Can often be done remotely</div>
+            </div>
+
+            <!-- Role 5 -->
+            <div class="bg-white border border-gray-200 rounded-3xl p-7 hover:border-[#4A1C6B] transition-colors">
+                <div class="w-12 h-12 bg-[#4A1C6B]/10 rounded-2xl flex items-center justify-center mb-5">
+                    <i class="fa-solid fa-bullhorn text-3xl text-[#4A1C6B]"></i>
+                </div>
+                <h3 class="font-semibold text-xl mb-2">Community &amp; Awareness</h3>
+                <p class="text-gray-600 text-sm mb-4">Help spread the word when a dog goes missing, manage our social media presence, organise fundraising events, or represent the charity at community events. Your voice helps more dogs get found faster.</p>
+                <div class="text-xs text-gray-500">Perfect for social media savvy volunteers</div>
+            </div>
+
+            <!-- Role 6 -->
+            <div class="bg-white border border-gray-200 rounded-3xl p-7 hover:border-[#4A1C6B] transition-colors">
+                <div class="w-12 h-12 bg-[#4A1C6B]/10 rounded-2xl flex items-center justify-center mb-5">
+                    <i class="fa-solid fa-first-aid text-3xl text-[#4A1C6B]"></i>
+                </div>
+                <h3 class="font-semibold text-xl mb-2">K9 First Aid &amp; Welfare</h3>
+                <p class="text-gray-600 text-sm mb-4">Support our training programme or assist with canine first aid knowledge within the team. Volunteers with existing veterinary, medical or first aid experience are especially valuable, but full training is available for everyone.</p>
+                <div class="text-xs text-gray-500">Valuable skill that benefits the whole team</div>
+            </div>
+
+        </div>
+
+        <!-- What We Offer -->
+        <div class="bg-[#F8F5F2] rounded-3xl p-8 md:p-10 mb-14">
+            <h2 class="text-2xl font-semibold text-[#4A1C6B] mb-6 text-center">What We Offer Volunteers</h2>
+            <div class="grid md:grid-cols-3 gap-6 text-sm">
+                <div class="flex gap-x-3">
+                    <i class="fa-solid fa-graduation-cap text-2xl text-[#4A1C6B] mt-1"></i>
+                    <div>
+                        <div class="font-semibold">Full Training Provided</div>
+                        <div class="text-gray-600">Search techniques, radio use, navigation, thermal drone awareness, canine first aid and safe working practices — all at no cost to you.</div>
+                    </div>
+                </div>
+                <div class="flex gap-x-3">
+                    <i class="fa-solid fa-shield-alt text-2xl text-[#4A1C6B] mt-1"></i>
+                    <div>
+                        <div class="font-semibold">Insurance &amp; Support</div>
+                        <div class="text-gray-600">Public liability insurance cover during official operations. We look after our volunteers with proper briefings, equipment and welfare support.</div>
+                    </div>
+                </div>
+                <div class="flex gap-x-3">
+                    <i class="fa-solid fa-users text-2xl text-[#4A1C6B] mt-1"></i>
+                    <div>
+                        <div class="font-semibold">Be Part of Something Meaningful</div>
+                        <div class="text-gray-600">Work alongside like-minded people who care deeply about animal welfare. Many of our volunteers say it’s one of the most rewarding things they’ve ever done.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Volunteer Form Section -->
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center mb-8">
+                <h2 class="text-3xl font-semibold text-[#4A1C6B]">Ready to Get Involved?</h2>
+                <p class="text-gray-600 mt-2">Complete the form below to express your interest in volunteering. We’ll get in touch to discuss the best role for you and arrange training.</p>
+            </div>
+
+            <!-- Embedded Google Form -->
+            <div class="bg-white border border-gray-200 rounded-3xl p-2 shadow-sm">
+                <iframe 
+                    src="https://docs.google.com/forms/d/e/1FAIpQLSc0ALDPhnrqidwm_c1iCc9yUpJJcEMd92DwuZwPOn9fzt0qig/viewform?embedded=true" 
+                    width="100%" 
+                    height="1200" 
+                    frameborder="0" 
+                    marginheight="0" 
+                    marginwidth="0"
+                    class="rounded-2xl">
+                    Loading…
+                </iframe>
+            </div>
+
+            <p class="text-center text-xs text-gray-500 mt-4">Your information is handled securely by Google Forms. We will only use it to contact you about volunteering opportunities with Noodle’s Canine Rescue IOM.</p>
+        </div>
+
+    </div>
+
+    <!-- Final CTA -->
+    <div class="bg-[#4A1C6B] text-white py-12">
+        <div class="max-w-3xl mx-auto px-5 text-center">
+            <h3 class="text-2xl font-semibold mb-3">Still have questions?</h3>
+            <p class="text-white/80 mb-6">We’re happy to chat about what’s involved. Email us or message us on Facebook.</p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="mailto:noodlescaninerescue@gmail.com" class="inline-flex items-center justify-center px-6 py-3 bg-white text-[#4A1C6B] font-semibold rounded-2xl">Email Us</a>
+                <a href="https://www.facebook.com/p/Noodles-Canine-Rescue-NCR-IOM-61577324553552/" target="_blank" class="inline-flex items-center justify-center px-6 py-3 border border-white/60 hover:bg-white/10 rounded-2xl font-semibold">Message on Facebook</a>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-[#1A1A2E] text-white/70 py-10 text-sm">
+        <div class="max-w-6xl mx-auto px-5 text-center">
+            <img src="ncr-logo.png" alt="NCR Logo" class="h-8 w-auto mx-auto mb-4">
+            <div class="font-semibold text-white mb-2">Noodle’s Canine Rescue IOM</div>
+            <div class="text-xs leading-relaxed max-w-2xl mx-auto">
+                EST 2025 - Noodle’s Canine Rescue (Isle of Man registered charity number 1387 as of 4th June 2026) - Isle of Man based Canine Search &amp; Rescue (Volunteer) - protecting the Islands Dogs.<br>
+                K Quayle, A O’Reilly, G Bell • Noodlescaninerescue@gmail.com
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
