@@ -4,60 +4,100 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Report a Missing Dog | Noodle’s Canine Rescue IOM</title>
-    <meta name="description" content="If your dog is missing on the Isle of Man, contact Noodle’s Canine Rescue immediately. We provide rapid thermal drone search and rescue support.">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <style>
-        .section-header { font-family: 'Playfair Display', Georgia, serif; }
-        .nav-link { transition: all 0.2s ease; }
-        .nav-link:hover { color: #C62828; }
-    </style>
 </head>
-<body class="bg-white font-sans">
-    <!-- Navigation -->
+<body class="bg-white font-sans text-gray-700">
+
+    <!-- Consistent Navigation Bar -->
     <nav class="bg-white border-b border-gray-100 sticky top-0 z-50">
-        <div class="max-w-7xl mx-auto px-6">
+        <div class="max-w-7xl mx-auto px-5">
             <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
                 <div class="flex items-center gap-x-3">
-                    <img src="ncr-logo.png" alt="Noodle’s Canine Rescue IOM Logo" class="h-11 w-auto">
+                    <img src="ncr-logo.png" alt="Noodle’s Canine Rescue Logo" class="h-10 w-auto">
                     <div>
-                        <div class="font-semibold text-xl tracking-tight text-[#4A1C6B]">Noodle’s Canine Rescue</div>
-                        <div class="text-[10px] text-gray-500 -mt-1">ISLE OF MAN • CHARITY NO. 1387</div>
+                        <div class="font-semibold text-lg tracking-tight text-[#4A1C6B]">Noodle’s Canine Rescue</div>
+                        <div class="text-[9px] text-gray-500 -mt-1">ISLE OF MAN • CHARITY NO. 1387</div>
                     </div>
                 </div>
-                <div class="hidden md:flex items-center gap-x-8 text-sm font-medium">
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center gap-x-7 text-sm font-medium">
                     <a href="index.html" class="nav-link text-gray-700">Home</a>
                     <a href="about.html" class="nav-link text-gray-700">About Us</a>
                     <a href="k9-first-aid.html" class="nav-link text-gray-700">K9 First Aid</a>
                     <a href="report-missing-dog.html" class="nav-link text-[#C62828] font-semibold">Report Missing Dog</a>
                     <a href="news.html" class="nav-link text-gray-700">News &amp; Updates</a>
                 </div>
-                <div>
-                    <a href="https://www.paypal.com/donate/?hosted_button_id=YOUR_BUTTON_ID" target="_blank"
-                       class="px-6 py-2.5 text-sm font-semibold rounded-2xl bg-[#C62828] text-white hover:bg-[#a81f1f] transition-colors">
-                        Donate Now
+
+                <div class="flex items-center gap-x-3">
+                    <a href="#get-involved" class="px-5 py-2 text-sm font-semibold rounded-2xl bg-[#C62828] text-white hover:bg-[#a81f1f] transition-colors">
+                        Volunteer Today
                     </a>
+                    <button id="burger-btn" class="md:hidden w-10 h-10 flex items-center justify-center text-gray-600">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+            <div class="px-5 py-4 flex flex-col gap-y-2 text-sm font-medium">
+                <a href="index.html" class="py-2 text-gray-700">Home</a>
+                <a href="about.html" class="py-2 text-gray-700">About Us</a>
+                <a href="k9-first-aid.html" class="py-2 text-gray-700">K9 First Aid</a>
+                <a href="report-missing-dog.html" class="py-2 text-[#C62828] font-semibold">Report Missing Dog</a>
+                <a href="news.html" class="py-2 text-gray-700">News &amp; Updates</a>
+                <div class="pt-3 border-t">
+                    <a href="#get-involved" class="py-2 text-[#C62828] font-semibold">Volunteer Today</a>
                 </div>
             </div>
         </div>
     </nav>
 
-    <div class="max-w-3xl mx-auto px-6 py-16">
+    <script>
+        const burgerBtn = document.getElementById('burger-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        burgerBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            const icon = burgerBtn.querySelector('i');
+            if (mobileMenu.classList.contains('hidden')) {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            } else {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+            }
+        });
+
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                const icon = burgerBtn.querySelector('i');
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            });
+        });
+    </script>
+
+    <div class="max-w-3xl mx-auto px-5 py-16">
         <div class="text-center mb-10">
             <div class="inline-flex items-center gap-x-2 bg-red-100 text-[#C62828] px-4 py-1 rounded-3xl text-sm font-semibold mb-4">
                 <i class="fa-solid fa-exclamation-triangle"></i>
                 <span>URGENT RESPONSE</span>
             </div>
-            <h1 class="section-header text-5xl tracking-tighter text-[#4A1C6B]">Report a Missing Dog</h1>
-            <p class="mt-4 text-xl text-gray-600">If your dog is missing, please contact us immediately. The sooner we start searching, the better the chances of a successful recovery.</p>
+            <h1 class="text-5xl tracking-tighter text-[#4A1C6B]">Report a Missing Dog</h1>
+            <p class="mt-4 text-xl text-gray-600">If your dog is missing, please contact us immediately.</p>
         </div>
 
-        <div class="bg-white border border-gray-200 rounded-3xl p-8 mb-10">
+        <div class="bg-white border border-gray-200 rounded-3xl p-8">
             <h2 class="font-semibold text-2xl mb-6">Contact Us Right Away</h2>
             
             <div class="space-y-4">
-                <a href="mailto:noodlescaninerescue@gmail.com?subject=Missing%20Dog%20Report" 
-                   class="flex items-center gap-x-4 p-4 border border-gray-200 rounded-2xl hover:bg-gray-50 transition-colors">
+                <a href="mailto:noodlescaninerescue@gmail.com?subject=Missing%20Dog%20Report" class="flex items-center gap-x-4 p-4 border border-gray-200 rounded-2xl hover:bg-gray-50 transition-colors">
                     <i class="fa-solid fa-envelope text-2xl text-[#4A1C6B]"></i>
                     <div>
                         <div class="font-semibold">Email Us</div>
@@ -66,29 +106,24 @@
                 </a>
                 
                 <div class="p-4 border border-gray-200 rounded-2xl">
-                    <div class="font-semibold mb-1">What to include in your message:</div>
+                    <div class="font-semibold mb-1">What to include:</div>
                     <ul class="text-gray-600 text-sm space-y-1 list-disc list-inside">
                         <li>Your name and contact number</li>
                         <li>Dog’s name, breed, age, and description</li>
                         <li>Last known location and time</li>
-                        <li>Any recent photos of your dog</li>
-                        <li>Any relevant medical conditions</li>
+                        <li>Any recent photos</li>
                     </ul>
                 </div>
             </div>
         </div>
-
-        <div class="text-center text-sm text-gray-500">
-            We respond as quickly as possible, day or night.<br>
-            Our thermal drone team is ready to deploy when needed.
-        </div>
     </div>
 
-    <footer class="bg-[#1A1A2E] text-white/70 py-12 text-sm">
-        <div class="max-w-6xl mx-auto px-6 text-center">
-            <img src="ncr-logo.png" alt="NCR Logo" class="h-9 w-auto mx-auto mb-4">
+    <footer class="bg-[#1A1A2E] text-white/70 py-10 text-sm">
+        <div class="max-w-6xl mx-auto px-5 text-center">
+            <img src="ncr-logo.png" alt="NCR Logo" class="h-8 w-auto mx-auto mb-4">
             <div>Noodle’s Canine Rescue IOM • Charity No. 1387</div>
         </div>
     </footer>
 </body>
 </html>
+```
