@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Noodle’s Canine Rescue IOM | Charity No. 1387</title>
-    <meta name="description" content="Noodle’s Canine Rescue IOM - Isle of Man canine search and rescue charity using thermal drones to find missing dogs. Charity No. 1387.">
+    <title>K9 First Aid Training | Noodle’s Canine Rescue IOM</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
@@ -25,152 +24,88 @@
                 <div class="hidden md:flex items-center gap-x-7 text-sm font-medium">
                     <a href="index.html" class="nav-link text-gray-700">Home</a>
                     <a href="about.html" class="nav-link text-gray-700">About Us</a>
-                    <a href="k9-first-aid.html" class="nav-link text-gray-700">K9 First Aid</a>
+                    <a href="k9-first-aid.html" class="nav-link text-[#4A1C6B] font-semibold">K9 First Aid</a>
                     <a href="report-missing-dog.html" class="nav-link text-gray-700">Report Missing Dog</a>
                     <a href="news.html" class="nav-link text-gray-700">News &amp; Updates</a>
                 </div>
 
-                <div class="flex items-center gap-x-3">
-                    <a href="#get-involved" class="px-5 py-2 text-sm font-semibold rounded-2xl bg-[#C62828] text-white hover:bg-[#a81f1f] transition-colors">
-                        Volunteer Today
-                    </a>
-                    <button id="burger-btn" class="md:hidden w-10 h-10 flex items-center justify-center text-gray-600">
-                        <i class="fa-solid fa-bars text-2xl"></i>
-                    </button>
-                </div>
-            </div>
-        </div>
-
-        <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
-            <div class="px-5 py-4 flex flex-col gap-y-2 text-sm font-medium">
-                <a href="index.html" class="py-2 text-gray-700">Home</a>
-                <a href="about.html" class="py-2 text-gray-700">About Us</a>
-                <a href="k9-first-aid.html" class="py-2 text-gray-700">K9 First Aid</a>
-                <a href="report-missing-dog.html" class="py-2 text-gray-700">Report Missing Dog</a>
-                <a href="news.html" class="py-2 text-gray-700">News &amp; Updates</a>
-                <div class="pt-3 border-t">
-                    <a href="#get-involved" class="py-2 text-[#C62828] font-semibold">Volunteer Today</a>
-                </div>
+                <a href="#get-involved" class="px-5 py-2 text-sm font-semibold rounded-2xl bg-[#C62828] text-white">Volunteer Today</a>
             </div>
         </div>
     </nav>
 
-    <script>
-        const burgerBtn = document.getElementById('burger-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
-
-        burgerBtn.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-            const icon = burgerBtn.querySelector('i');
-            if (mobileMenu.classList.contains('hidden')) {
-                icon.classList.remove('fa-times');
-                icon.classList.add('fa-bars');
-            } else {
-                icon.classList.remove('fa-bars');
-                icon.classList.add('fa-times');
-            }
-        });
-
-        document.querySelectorAll('#mobile-menu a').forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenu.classList.add('hidden');
-                const icon = burgerBtn.querySelector('i');
-                icon.classList.remove('fa-times');
-                icon.classList.add('fa-bars');
-            });
-        });
-    </script>
-
-    <!-- Hero -->
-    <header class="bg-[#4A1C6B] text-white py-16 md:py-20">
-        <div class="max-w-5xl mx-auto px-5 text-center">
-            <div class="inline-flex items-center gap-x-2 bg-white/90 text-[#4A1C6B] text-xs font-semibold tracking-[1.5px] px-4 py-1.5 rounded-3xl mb-6">
-                <div class="w-2 h-2 bg-[#C62828] rounded-full animate-pulse"></div>
-                OFFICIALLY REGISTERED CHARITY NO. 1387
-            </div>
-
-            <h1 class="text-5xl md:text-6xl font-semibold tracking-tighter leading-none mb-6">
-                Finding missing dogs.<br>
-                Reuniting families.
-            </h1>
-            
-            <p class="max-w-md mx-auto text-lg text-white/90 mb-8">
-                We are the Isle of Man’s dedicated canine search and rescue charity using thermal drone technology to bring lost dogs home.
-            </p>
-
-            <div class="flex flex-col gap-3 max-w-xs mx-auto">
-                <a href="report-missing-dog.html" class="w-full inline-flex justify-center px-8 py-3.5 bg-white text-[#4A1C6B] font-semibold rounded-2xl text-base">Report a Missing Dog</a>
-                <a href="#get-involved" class="w-full inline-flex justify-center px-8 py-3.5 border border-white/70 text-white font-semibold rounded-2xl text-base">Volunteer Today</a>
-            </div>
-        </div>
-    </header>
-
-    <!-- Trust Bar -->
-    <div class="bg-white border-b py-4">
-        <div class="max-w-6xl mx-auto px-5">
-            <div class="flex flex-col md:flex-row items-center justify-center gap-x-8 gap-y-2 text-sm text-center md:text-left">
-                <div class="flex items-center gap-x-2 text-[#4A1C6B]">
-                    <i class="fa-solid fa-check-circle text-[#C62828]"></i>
-                    <span class="font-medium">Isle of Man Registered Charity No. 1387</span>
-                </div>
-                <div class="hidden md:block text-gray-300">|</div>
-                <div class="flex flex-wrap justify-center gap-x-5 text-xs text-gray-600">
-                    <div>Thermal Drone Operations</div>
-                    <div>Canine Search &amp; Rescue</div>
-                    <div>24/7 Response</div>
-                </div>
-            </div>
+    <!-- Header -->
+    <div class="bg-[#F8F5F2] py-14">
+        <div class="max-w-4xl mx-auto px-5 text-center">
+            <h1 class="text-5xl tracking-tighter text-[#4A1C6B] font-semibold mb-4">K9 First Aid Training</h1>
+            <p class="text-lg text-gray-600">Professional training courses delivered by Noodle’s Canine Rescue team members</p>
         </div>
     </div>
 
-    <!-- Our Story -->
-    <section class="max-w-5xl mx-auto px-5 py-14">
-        <div class="max-w-3xl">
-            <div class="text-[#C62828] text-xs font-semibold tracking-widest mb-2">OUR STORY</div>
-            <h2 class="text-4xl tracking-tighter text-[#4A1C6B] font-semibold mb-5">Born from a simple idea: no dog should be lost forever.</h2>
-            <p class="text-base text-gray-600">Noodle’s Canine Rescue was founded to provide a dedicated, professional canine search and rescue service for missing dogs on the Isle of Man using thermal drone technology.</p>
-        </div>
-    </section>
+    <!-- Course Menu -->
+    <div class="max-w-6xl mx-auto px-5 py-14">
+        <h2 class="text-3xl font-semibold text-[#4A1C6B] mb-8 text-center">Our Training Courses</h2>
 
-    <!-- How We Help -->
-    <section class="bg-[#F8F5F2] py-14">
-        <div class="max-w-6xl mx-auto px-5">
-            <div class="text-center mb-10">
-                <div class="text-[#C62828] text-xs font-semibold tracking-widest mb-2">HOW WE HELP</div>
-                <h2 class="text-4xl tracking-tighter text-[#4A1C6B] font-semibold">Advanced Canine Search.<br>Compassionate Rescue.</h2>
+        <div class="grid md:grid-cols-2 gap-8">
+            
+            <!-- Level 2 Dog First Aid -->
+            <div class="border border-gray-200 rounded-3xl p-8 hover:border-[#4A1C6B] transition-colors">
+                <div class="flex items-center gap-x-4 mb-6">
+                    <div class="w-14 h-14 bg-[#4A1C6B] rounded-2xl flex items-center justify-center">
+                        <i class="fa-solid fa-first-aid text-white text-3xl"></i>
+                    </div>
+                    <div>
+                        <div class="font-bold text-2xl">Level 2 Dog First Aid</div>
+                        <div class="text-sm text-gray-500">For dog handlers and owners</div>
+                    </div>
+                </div>
+                <p class="text-gray-600 mb-6">Essential first aid skills for everyday dog owners and handlers. Covers common emergencies, CPR, wound care, and when to seek veterinary help.</p>
+                
+                <div class="text-sm space-y-1 mb-6">
+                    <div class="flex justify-between py-1 border-t"><span>Duration</span> <span class="font-medium">1 Day</span></div>
+                    <div class="flex justify-between py-1 border-t"><span>Certification</span> <span class="font-medium">Level 2 Award</span></div>
+                    <div class="flex justify-between py-1 border-t"><span>Cost</span> <span class="font-medium">Contact for pricing</span></div>
+                </div>
+                
+                <a href="report-missing-dog.html" class="inline-block w-full text-center px-6 py-3 bg-[#4A1C6B] text-white font-semibold rounded-2xl">Enquire / Book</a>
             </div>
 
-            <div class="grid md:grid-cols-3 gap-6">
-                <div class="bg-white rounded-3xl p-7 border border-gray-100">
-                    <div class="w-11 h-11 bg-[#4A1C6B]/10 rounded-2xl flex items-center justify-center mb-5">
-                        <img src="drone-silhouette.png" alt="Drone" class="w-8 h-8">
+            <!-- Level 3 Dog First Aid / Security Dog -->
+            <div class="border border-gray-200 rounded-3xl p-8 hover:border-[#4A1C6B] transition-colors">
+                <div class="flex items-center gap-x-4 mb-6">
+                    <div class="w-14 h-14 bg-[#4A1C6B] rounded-2xl flex items-center justify-center">
+                        <i class="fa-solid fa-shield-alt text-white text-3xl"></i>
                     </div>
-                    <h3 class="font-semibold text-xl mb-3">Thermal Drone Searches</h3>
-                    <p class="text-sm text-gray-600">We use high-resolution thermal drones to locate missing dogs in woodland, coastal areas, and at night.</p>
-                </div>
-
-                <div class="bg-white rounded-3xl p-7 border border-gray-100">
-                    <div class="w-11 h-11 bg-[#4A1C6B]/10 rounded-2xl flex items-center justify-center mb-5">
-                        <i class="fa-solid fa-users text-2xl text-[#4A1C6B]"></i>
+                    <div>
+                        <div class="font-bold text-2xl">Level 3 Dog First Aid</div>
+                        <div class="text-sm text-gray-500">For security dog handlers &amp; professionals</div>
                     </div>
-                    <h3 class="font-semibold text-xl mb-3">Ground Teams &amp; Volunteers</h3>
-                    <p class="text-sm text-gray-600">Trained volunteers and K9 handlers conduct coordinated canine search and rescue operations.</p>
                 </div>
-
-                <div class="bg-white rounded-3xl p-7 border border-gray-100">
-                    <div class="w-11 h-11 bg-[#4A1C6B]/10 rounded-2xl flex items-center justify-center mb-5">
-                        <i class="fa-solid fa-clock text-2xl text-[#4A1C6B]"></i>
-                    </div>
-                    <h3 class="font-semibold text-xl mb-3">Rapid Response</h3>
-                    <p class="text-sm text-gray-600">We maintain a ready team for rapid deployment across the Isle of Man.</p>
+                <p class="text-gray-600 mb-6">Advanced first aid training tailored for security dog handlers. Includes trauma care, working dog specific injuries, and emergency response in operational environments.</p>
+                
+                <div class="text-sm space-y-1 mb-6">
+                    <div class="flex justify-between py-1 border-t"><span>Duration</span> <span class="font-medium">2 Days</span></div>
+                    <div class="flex justify-between py-1 border-t"><span>Certification</span> <span class="font-medium">Level 3 Award</span></div>
+                    <div class="flex justify-between py-1 border-t"><span>Cost</span> <span class="font-medium">Contact for pricing</span></div>
                 </div>
+                
+                <a href="report-missing-dog.html" class="inline-block w-full text-center px-6 py-3 bg-[#4A1C6B] text-white font-semibold rounded-2xl">Enquire / Book</a>
             </div>
-        </div>
-    </section>
 
-    <!-- Accurate Records -->
-    <section class="max-w-5xl mx-auto px-5 py-14">
-        <div class="max-w-3xl">
-            <div class="text-[#C62828] text-xs font-semibold tracking-widest mb-2">OUR RECORD</div>
-            <h2 class="text-4xl tracking-tighter text-[#4A1C6B] font-semibold mb-6">Canine Search &amp; Rescue
+        </div>
+
+        <div class="mt-12 text-center">
+            <p class="text-gray-600">All courses are delivered by qualified instructors from the Noodle’s Canine Rescue team.</p>
+            <a href="report-missing-dog.html" class="inline-block mt-4 text-[#C62828] font-semibold">Contact us to discuss group bookings or custom training →</a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-[#1A1A2E] text-white/70 py-10 text-sm">
+        <div class="max-w-6xl mx-auto px-5 text-center">
+            <img src="ncr-logo.png" alt="NCR Logo" class="h-8 w-auto mx-auto mb-4">
+            <div>Noodle’s Canine Rescue IOM • Charity No. 1387</div>
+        </div>
+    </footer>
+</body>
+</html>
