@@ -10,25 +10,22 @@
     <style>
         .nav-link { transition: color 0.2s ease; }
         .nav-link:hover { color: #C62828; }
-        .hero-bg { background-size: cover; background-position: center; background-attachment: fixed; }
+        .hero-bg { background-size: cover; background-position: center; }
     </style>
 </head>
 <body class="bg-white font-sans text-gray-700">
 
-    <!-- Navigation -->
     <nav class="bg-white border-b border-gray-100 sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-6">
             <div class="flex justify-between items-center h-20">
-                <!-- Logo -->
-                <div class="flex items-center gap-x-3">
-                    <img src="ncr-logo.jpg" alt="Noodle’s Canine Rescue Logo" class="h-11 w-auto">
+                <a href="index.html" class="flex items-center gap-x-3">
+                    <img src="ncr-logo.png" alt="Noodle’s Canine Rescue Logo" class="h-11 w-auto">
                     <div>
                         <div class="font-semibold text-xl tracking-tight text-[#4A1C6B]">Noodle’s Canine Rescue</div>
                         <div class="text-[10px] text-gray-500 -mt-1">ISLE OF MAN • CHARITY NO. 1387</div>
                     </div>
-                </div>
+                </a>
 
-                <!-- Desktop Navigation -->
                 <div class="hidden md:flex items-center gap-x-8 text-sm font-medium">
                     <a href="index.html" class="nav-link text-gray-700">Home</a>
                     <a href="about.html" class="nav-link text-gray-700">About Us</a>
@@ -38,15 +35,14 @@
                 </div>
 
                 <div class="flex items-center gap-x-3">
-                    <a href="#get-involved" class="hidden md:block px-5 py-2.5 text-sm font-semibold rounded-2xl border border-[#4A1C6B] text-[#4A1C6B] hover:bg-[#4A1C6B] hover:text-white transition-colors">
-                        Volunteer
+                    <a href="volunteer.html" class="hidden md:block px-5 py-2.5 text-sm font-semibold rounded-2xl border border-[#4A1C6B] text-[#4A1C6B] hover:bg-[#4A1C6B] hover:text-white transition-colors">
+                        Volunteer Today
                     </a>
-                    <a href="https://www.paypal.com/donate/?hosted_button_id=YOUR_BUTTON_ID" target="_blank" 
+                    <a href="report-missing-dog.html"
                        class="px-6 py-2.5 text-sm font-semibold rounded-2xl bg-[#C62828] text-white hover:bg-[#a81f1f] transition-colors">
-                        Donate Now
+                        Report Missing Dog
                     </a>
-                    
-                    <!-- Mobile Burger -->
+
                     <button id="burger-btn" class="md:hidden w-10 h-10 flex items-center justify-center text-gray-600 hover:text-[#4A1C6B]">
                         <i class="fa-solid fa-bars text-2xl"></i>
                     </button>
@@ -54,7 +50,6 @@
             </div>
         </div>
 
-        <!-- Mobile Menu -->
         <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
             <div class="px-6 py-4 flex flex-col gap-y-3 text-sm font-medium">
                 <a href="index.html" class="py-2 text-gray-700">Home</a>
@@ -63,8 +58,8 @@
                 <a href="report-missing-dog.html" class="py-2 text-gray-700">Report Missing Dog</a>
                 <a href="news.html" class="py-2 text-gray-700">News &amp; Updates</a>
                 <div class="pt-3 border-t flex flex-col gap-y-3">
-                    <a href="#get-involved" class="py-2 text-[#4A1C6B] font-semibold">Volunteer</a>
-                    <a href="https://www.paypal.com/donate/?hosted_button_id=YOUR_BUTTON_ID" target="_blank" class="py-2 text-[#C62828] font-semibold">Donate Now</a>
+                    <a href="volunteer.html" class="py-2 text-[#4A1C6B] font-semibold">Volunteer Today</a>
+                    <a href="report-missing-dog.html" class="py-2 text-[#C62828] font-semibold">Report Missing Dog</a>
                 </div>
             </div>
         </div>
@@ -73,32 +68,23 @@
     <script>
         const burgerBtn = document.getElementById('burger-btn');
         const mobileMenu = document.getElementById('mobile-menu');
-
         burgerBtn.addEventListener('click', () => {
             mobileMenu.classList.toggle('hidden');
             const icon = burgerBtn.querySelector('i');
-            if (mobileMenu.classList.contains('hidden')) {
-                icon.classList.remove('fa-times');
-                icon.classList.add('fa-bars');
-            } else {
-                icon.classList.remove('fa-bars');
-                icon.classList.add('fa-times');
-            }
+            icon.classList.toggle('fa-bars');
+            icon.classList.toggle('fa-times');
         });
-
         document.querySelectorAll('#mobile-menu a').forEach(link => {
             link.addEventListener('click', () => {
                 mobileMenu.classList.add('hidden');
-                const icon = burgerBtn.querySelector('i');
-                icon.classList.remove('fa-times');
-                icon.classList.add('fa-bars');
+                burgerBtn.querySelector('i').classList.add('fa-bars');
+                burgerBtn.querySelector('i').classList.remove('fa-times');
             });
         });
     </script>
 
-    <!-- Hero Section -->
-    <header class="hero-bg h-[100dvh] min-h-[640px] flex items-center relative" 
-            style="background: linear-gradient(rgba(74, 28, 107, 0.82), rgba(74, 28, 107, 0.72)), url('hero-bg.jpg'); background-size: cover; background-position: center;">
+    <header class="hero-bg h-[100dvh] min-h-[640px] flex items-center relative"
+            style="background: linear-gradient(rgba(74, 28, 107, 0.82), rgba(74, 28, 107, 0.72)), url('hero-bg.png'); background-size: cover; background-position: center;">
         <div class="max-w-5xl mx-auto px-6 text-white">
             <div class="max-w-3xl">
                 <div class="inline-flex items-center gap-x-2 bg-white/90 text-[#4A1C6B] text-xs font-semibold tracking-[1.5px] px-4 py-1.5 rounded-3xl mb-6">
@@ -110,59 +96,57 @@
                     Finding missing dogs.<br>
                     <span class="text-white/90">Reuniting families.</span>
                 </h1>
-                
+
                 <p class="max-w-md text-xl text-white/90 mb-10">
-                    We are the Isle of Man’s dedicated canine search and rescue charity. Using advanced thermal drone technology, trained ground teams and scent dogs, we bring lost dogs home — quickly, safely and compassionately.
+                    Isle of Man’s dedicated canine search and rescue charity. We bring lost dogs home faster using thermal drones, thermal handheld cameras, systematic ground searches, 4G wildlife cameras and trained scent dogs.
                 </p>
 
                 <div class="flex flex-col sm:flex-row gap-4">
-                    <a href="report-missing-dog.html" 
+                    <a href="report-missing-dog.html"
                        class="inline-flex items-center justify-center px-8 py-4 bg-white text-[#4A1C6B] font-semibold rounded-3xl text-lg hover:bg-gray-100 transition-all">
                         Report a Missing Dog
                     </a>
-                    <a href="#get-involved" 
+                    <a href="volunteer.html"
                        class="inline-flex items-center justify-center px-8 py-4 border border-white/70 hover:bg-white/10 text-white font-semibold rounded-3xl text-lg transition-all">
-                        Support Our Work
+                        Volunteer Today
                     </a>
                 </div>
             </div>
         </div>
     </header>
 
-    <!-- Trust Bar -->
     <div class="bg-[#4A1C6B] py-4">
         <div class="max-w-6xl mx-auto px-6">
             <div class="flex flex-wrap justify-center md:justify-between items-center gap-x-8 gap-y-3 text-white/90 text-sm">
                 <div class="flex items-center gap-x-2">
                     <i class="fa-solid fa-check-circle text-[#C62828]"></i>
-                    <span class="font-medium">Isle of Man Registered Charity No. 1387 • Est. 2025</span>
+                    <span class="font-medium">Isle of Man Registered Charity No. 1387 • Registered 4 June 2026</span>
                 </div>
                 <div class="flex items-center gap-x-6 text-xs md:text-sm">
-                    <div>Thermal Drone Operations</div>
-                    <div>Ground &amp; Scent Dog Teams</div>
-                    <div>Rapid 24/7 Response</div>
+                    <div>55 Reports Handled</div>
+                    <div>100% Recovery Rate</div>
+                    <div>25 Active Searches</div>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Quick Links -->
     <section class="max-w-6xl mx-auto px-6 py-16">
         <div class="grid md:grid-cols-4 gap-6">
             <a href="about.html" class="group block p-6 border border-gray-200 rounded-3xl hover:border-[#4A1C6B] transition-colors">
                 <div class="text-[#4A1C6B] mb-3"><i class="fa-solid fa-info-circle text-3xl"></i></div>
                 <div class="font-semibold text-xl mb-1 group-hover:text-[#4A1C6B]">About Us</div>
-                <div class="text-sm text-gray-600">Our story, mission, teams and training standards as the Isle of Man’s specialist canine search and rescue charity.</div>
+                <div class="text-sm text-gray-600">Isle of Man’s dedicated canine search and rescue charity. Our story, mission, teams and training standards.</div>
             </a>
             <a href="k9-first-aid.html" class="group block p-6 border border-gray-200 rounded-3xl hover:border-[#4A1C6B] transition-colors">
                 <div class="text-[#4A1C6B] mb-3"><i class="fa-solid fa-first-aid text-3xl"></i></div>
-                <div class="font-semibold text-xl mb-1 group-hover:text-[#4A1C6B]">K9 First Aid Training</div>
-                <div class="text-sm text-gray-600">Professional Level 2 &amp; Level 3 courses for dog owners, handlers and security professionals.</div>
+                <div class="font-semibold text-xl mb-1 group-hover:text-[#4A1C6B]">Canine First Aid Training</div>
+                <div class="text-sm text-gray-600">Professional Level 2 &amp; Level 3 VTQ courses delivered by a qualified instructor from Noodle’s Canine Rescue.</div>
             </a>
             <a href="report-missing-dog.html" class="group block p-6 border border-gray-200 rounded-3xl hover:border-[#C62828] transition-colors">
                 <div class="text-[#C62828] mb-3"><i class="fa-solid fa-exclamation-triangle text-3xl"></i></div>
                 <div class="font-semibold text-xl mb-1 group-hover:text-[#C62828]">Report a Missing Dog</div>
-                <div class="text-sm text-gray-600">If your dog is missing, use our official form for immediate response from our drone, ground and scent teams.</div>
+                <div class="text-sm text-gray-600">Report a missing dog immediately for response from our drone, ground and scent teams.</div>
             </a>
             <a href="news.html" class="group block p-6 border border-gray-200 rounded-3xl hover:border-[#4A1C6B] transition-colors">
                 <div class="text-[#4A1C6B] mb-3"><i class="fa-solid fa-newspaper text-3xl"></i></div>
@@ -172,11 +156,10 @@
         </div>
     </section>
 
-    <!-- What We Do -->
     <section class="bg-[#F8F5F2] py-16">
         <div class="max-w-6xl mx-auto px-6">
             <div class="text-center mb-12">
-                <div class="text-[#C62828] text-sm font-semibold tracking-widest mb-2">HOW WE HELP</div>
+                <div class="text-[#C62828] text-sm font-semibold tracking-widest mb-2">OUR TEAMS</div>
                 <h2 class="text-5xl tracking-tighter text-[#4A1C6B] font-semibold">Canine Search &amp; Rescue.<br>Powered by Technology &amp; Teamwork.</h2>
             </div>
 
@@ -185,167 +168,163 @@
                     <div class="w-12 h-12 bg-[#4A1C6B]/10 rounded-2xl flex items-center justify-center mb-6">
                         <i class="fa-solid fa-drone text-3xl text-[#4A1C6B]"></i>
                     </div>
-                    <h3 class="font-semibold text-2xl mb-3">Thermal Drone Searches</h3>
-                    <p class="text-gray-600">Our professional-grade thermal drones detect heat signatures in woodland, coastal terrain, plantations and at night — dramatically increasing recovery rates even in the most challenging conditions on the Isle of Man.</p>
+                    <h3 class="font-semibold text-2xl mb-3">Drone Team</h3>
+                    <p class="text-gray-600">Led by Aaron O’Reilly, our Drone Team operates professional-grade thermal imaging drones capable of detecting heat signatures from significant distances, even in dense woodland, coastal areas or complete darkness. Deployed 14 times on active searches with 4 dogs located directly using thermal imaging.</p>
                 </div>
 
                 <div class="bg-white rounded-3xl p-8 border border-gray-100">
                     <div class="w-12 h-12 bg-[#4A1C6B]/10 rounded-2xl flex items-center justify-center mb-6">
                         <i class="fa-solid fa-users text-3xl text-[#4A1C6B]"></i>
                     </div>
-                    <h3 class="font-semibold text-2xl mb-3">Ground Teams &amp; Volunteers</h3>
-                    <p class="text-gray-600">Highly trained volunteers conduct systematic ground searches using proven patterns, navigation and radio protocols. They work seamlessly alongside drone teams and scent dogs across rural, coastal and urban-fringe areas.</p>
+                    <h3 class="font-semibold text-2xl mb-3">Ground Search Team</h3>
+                    <p class="text-gray-600">Systematic physical searches on foot using proven search patterns, navigation, terrain assessment and radio discipline across coastal paths, plantations, ravines and boggy moorland. Works in close coordination with drone intelligence.</p>
                 </div>
 
                 <div class="bg-white rounded-3xl p-8 border border-gray-100">
                     <div class="w-12 h-12 bg-[#4A1C6B]/10 rounded-2xl flex items-center justify-center mb-6">
                         <i class="fa-solid fa-dog text-3xl text-[#4A1C6B]"></i>
                     </div>
-                    <h3 class="font-semibold text-2xl mb-3">Scent Dog &amp; K9 Handlers</h3>
-                    <p class="text-gray-600">Our Dog Handling team works with trained scent dogs, including our own collie Noodle in advanced scent discrimination training. They provide precise location capability and integrate closely with drone intelligence and ground teams.</p>
+                    <h3 class="font-semibold text-2xl mb-3">Dog Handling &amp; Scent Dogs</h3>
+                    <p class="text-gray-600">Our Dog Handling team is building capability with Noodle, our 18-month-old collie currently undergoing scent discrimination training to become a fully qualified search dog for the organisation.</p>
                 </div>
+            </div>
+
+            <div class="text-center mt-10">
+                <a href="about.html" class="text-[#4A1C6B] font-semibold hover:underline">Learn more about our teams →</a>
             </div>
         </div>
     </section>
 
-    <!-- Recent Facebook Posts -->
     <section class="max-w-6xl mx-auto px-6 py-16">
         <div class="flex items-end justify-between mb-8">
             <div>
-                <div class="text-[#C62828] text-sm font-semibold tracking-widest">STAY UPDATED</div>
-                <h2 class="text-4xl tracking-tighter text-[#4A1C6B] font-semibold">Recent Updates from Our Team</h2>
+                <div class="text-[#C62828] text-sm font-semibold tracking-widest">NEWS &amp; UPDATES</div>
+                <h2 class="text-4xl tracking-tighter text-[#4A1C6B] font-semibold">Latest from Our Operations</h2>
             </div>
-            <a href="https://www.facebook.com/p/Noodles-Canine-Rescue-NCR-IOM-61577324553552/" target="_blank" class="hidden md:block text-sm font-semibold text-[#4A1C6B] hover:underline">Follow us on Facebook →</a>
+            <a href="news.html" class="hidden md:block text-sm font-semibold text-[#4A1C6B] hover:underline">View all updates →</a>
         </div>
 
-        <div class="grid md:grid-cols-3 gap-6">
-            <!-- Post 1 -->
-            <a href="https://www.facebook.com/p/Noodles-Canine-Rescue-NCR-IOM-61577324553552/" target="_blank" class="block border border-gray-200 rounded-3xl p-6 hover:border-[#4A1C6B] transition-colors">
+        <div class="grid md:grid-cols-2 gap-6">
+            <a href="news.html" class="block border border-gray-200 rounded-3xl p-6 hover:border-[#4A1C6B] transition-colors">
                 <div class="flex items-center gap-x-3 mb-4">
-                    <div class="w-10 h-10 bg-[#4A1C6B] rounded-full flex items-center justify-center text-white text-xs font-bold">NCR</div>
-                    <div>
-                        <div class="font-semibold">Noodle’s Canine Rescue</div>
-                        <div class="text-xs text-gray-500">4 June 2026</div>
-                    </div>
+                    <span class="px-3 py-0.5 bg-green-100 text-green-700 rounded-full text-xs font-semibold">MILESTONE</span>
+                    <span class="text-xs text-gray-500">4 June 2026</span>
                 </div>
-                <p class="text-sm">🎉 We are officially registered as Isle of Man Charity No. 1387! Thank you to everyone who supported our journey from volunteer group to registered charity. This milestone strengthens our ability to serve the Island’s dogs and families.</p>
-                <div class="mt-4 text-xs text-[#C62828] font-semibold">Read more on Facebook →</div>
+                <h3 class="font-semibold text-lg mb-2">Officially Registered as Charity No. 1387</h3>
+                <p class="text-sm text-gray-600">We are delighted to announce that Noodle’s Canine Rescue has been officially registered as an Isle of Man charity (No. 1387). This status strengthens our governance, fundraising capability and ability to collaborate with emergency services.</p>
             </a>
 
-            <!-- Post 2 -->
-            <a href="https://www.facebook.com/p/Noodles-Canine-Rescue-NCR-IOM-61577324553552/" target="_blank" class="block border border-gray-200 rounded-3xl p-6 hover:border-[#4A1C6B] transition-colors">
+            <a href="news.html" class="block border border-gray-200 rounded-3xl p-6 hover:border-[#4A1C6B] transition-colors">
                 <div class="flex items-center gap-x-3 mb-4">
-                    <div class="w-10 h-10 bg-[#4A1C6B] rounded-full flex items-center justify-center text-white text-xs font-bold">NCR</div>
-                    <div>
-                        <div class="font-semibold">Noodle’s Canine Rescue</div>
-                        <div class="text-xs text-gray-500">Recent Operation</div>
-                    </div>
+                    <span class="px-3 py-0.5 bg-blue-100 text-blue-700 rounded-full text-xs font-semibold">OPERATION</span>
+                    <span class="text-xs text-gray-500">January 2026</span>
                 </div>
-                <p class="text-sm">Another successful recovery in challenging coastal terrain thanks to our thermal drone team and dedicated volunteers. The dog was located safely and reunited with a very relieved family. Every search reminds us why this work matters.</p>
-                <div class="mt-4 text-xs text-[#C62828] font-semibold">Read more on Facebook →</div>
+                <h3 class="font-semibold text-lg mb-2">Successful Recovery of Toffee – 50+ Hour Search</h3>
+                <p class="text-sm text-gray-600">Our teams led a complex search in Foxdale and St Marks Country Park. Working alongside landowners, police, coastguard, and dozens of public volunteers, thermal drones played a crucial role after more than 50 hours missing.</p>
             </a>
 
-            <!-- Post 3 -->
-            <a href="https://www.facebook.com/p/Noodles-Canine-Rescue-NCR-IOM-61577324553552/" target="_blank" class="block border border-gray-200 rounded-3xl p-6 hover:border-[#4A1C6B] transition-colors">
+            <a href="news.html" class="block border border-gray-200 rounded-3xl p-6 hover:border-[#4A1C6B] transition-colors">
                 <div class="flex items-center gap-x-3 mb-4">
-                    <div class="w-10 h-10 bg-[#4A1C6B] rounded-full flex items-center justify-center text-white text-xs font-bold">NCR</div>
-                    <div>
-                        <div class="font-semibold">Noodle’s Canine Rescue</div>
-                        <div class="text-xs text-gray-500">Ongoing Training</div>
-                    </div>
+                    <span class="px-3 py-0.5 bg-purple-100 text-purple-700 rounded-full text-xs font-semibold">STATISTICS</span>
+                    <span class="text-xs text-gray-500">2025–2026 Season</span>
                 </div>
-                <p class="text-sm">Our collie Noodle continues her advanced scent discrimination training. Combined with our growing drone capability and expanding volunteer base, we are building one of the most effective canine search and rescue resources in the British Isles.</p>
-                <div class="mt-4 text-xs text-[#C62828] font-semibold">Read more on Facebook →</div>
+                <h3 class="font-semibold text-lg mb-2">Strong Track Record of Success</h3>
+                <p class="text-sm text-gray-600">55 missing dog reports handled, 100% recovery rate, 4 dogs located by thermal drone, 14 drone deployments, and 25 active searches between June 2025 and June 2026.</p>
+            </a>
+
+            <a href="news.html" class="block border border-gray-200 rounded-3xl p-6 hover:border-[#4A1C6B] transition-colors">
+                <div class="flex items-center gap-x-3 mb-4">
+                    <span class="px-3 py-0.5 bg-amber-100 text-amber-700 rounded-full text-xs font-semibold">TRAINING</span>
+                    <span class="text-xs text-gray-500">Ongoing</span>
+                </div>
+                <h3 class="font-semibold text-lg mb-2">Noodle’s Scent Dog Training Progress</h3>
+                <p class="text-sm text-gray-600">Our collie Noodle continues her scent discrimination training and is making excellent progress toward becoming a fully qualified search dog for the organisation.</p>
             </a>
         </div>
     </section>
 
-    <!-- Amazon Wishlist -->
     <section class="max-w-6xl mx-auto px-6 pb-16">
         <div class="bg-[#F8F5F2] rounded-3xl p-10 md:p-12 flex flex-col md:flex-row items-center justify-between gap-8">
             <div>
                 <div class="text-[#C62828] text-sm font-semibold tracking-widest mb-2">SUPPORT OUR OPERATIONS</div>
-                <h2 class="text-4xl tracking-tighter text-[#4A1C6B] font-semibold mb-3">Amazon Wishlist &amp; Equipment Fund</h2>
-                <p class="text-gray-600 max-w-md">Help us maintain and expand our thermal drones, 4G cameras, safety equipment, batteries and K9 first aid supplies. Every item directly supports faster, safer searches for missing dogs across the Isle of Man.</p>
+                <h2 class="text-4xl tracking-tighter text-[#4A1C6B] font-semibold mb-3">Equipment &amp; Capability Growth</h2>
+                <p class="text-gray-600 max-w-md">Professional thermal drone now operational, supported by community fundraising, plus 4G wildlife cameras and safety equipment. In the future we look to fund a weatherproof drone to allow for more deployments.</p>
             </div>
             <div>
-                <a href="#" target="_blank" 
+                <a href="mailto:noodlescaninerescue@gmail.com?subject=Support%20Noodle%27s%20Canine%20Rescue"
                    class="inline-flex items-center justify-center px-8 py-4 bg-[#C62828] hover:bg-[#a81f1f] text-white font-semibold rounded-3xl text-lg transition-all">
-                    View Our Amazon Wishlist
+                    Contact Us to Support
                 </a>
             </div>
         </div>
     </section>
 
-    <!-- Get Involved -->
     <section id="get-involved" class="bg-[#4A1C6B] text-white py-20">
         <div class="max-w-5xl mx-auto px-6 text-center">
             <div class="max-w-2xl mx-auto">
-                <div class="text-[#C62828] font-semibold tracking-widest text-sm mb-3">JOIN THE MISSION</div>
-                <h2 class="text-5xl tracking-tighter font-semibold mb-6">There are many ways<br>you can help bring dogs home.</h2>
+                <div class="text-[#C62828] font-semibold tracking-widest text-sm mb-3">GET INVOLVED</div>
+                <h2 class="text-5xl tracking-tighter font-semibold mb-6">Help bring dogs home.</h2>
+                <p class="text-white/80">We are always looking for dedicated volunteers for ground searching, drone observation, logistics and community support roles. Full training is provided.</p>
             </div>
 
             <div class="grid md:grid-cols-3 gap-6 mt-14">
                 <div class="bg-white/10 hover:bg-white/15 transition-colors rounded-3xl p-8 text-left">
                     <i class="fa-solid fa-hand-holding-heart text-4xl mb-5"></i>
-                    <div class="font-semibold text-2xl mb-2">Donate</div>
+                    <div class="font-semibold text-2xl mb-2">Support Our Work</div>
                     <p class="text-white/75 text-sm mb-6">Your support funds drone maintenance, volunteer training, insurance, K9 first aid equipment and rapid response capability across the Island.</p>
-                    <a href="https://www.paypal.com/donate/?hosted_button_id=YOUR_BUTTON_ID" target="_blank" class="inline-block px-6 py-3 bg-white text-[#4A1C6B] text-sm font-semibold rounded-2xl">Donate Securely via PayPal</a>
+                    <a href="mailto:noodlescaninerescue@gmail.com?subject=Support%20Noodle%27s%20Canine%20Rescue" class="inline-block px-6 py-3 bg-white text-[#4A1C6B] text-sm font-semibold rounded-2xl">Contact Us</a>
                 </div>
-                
+
                 <div class="bg-white/10 hover:bg-white/15 transition-colors rounded-3xl p-8 text-left">
                     <i class="fa-solid fa-users text-4xl mb-5"></i>
-                    <div class="font-semibold text-2xl mb-2">Volunteer</div>
+                    <div class="font-semibold text-2xl mb-2">Volunteer Today</div>
                     <p class="text-white/75 text-sm mb-6">Join our ground search teams, train as a drone observer, or support logistics and community awareness. Full training provided.</p>
-                    <a href="report-missing-dog.html" class="inline-block px-6 py-3 border border-white/60 hover:bg-white hover:text-[#4A1C6B] text-sm font-semibold rounded-2xl transition-colors">Join Our Team</a>
+                    <a href="volunteer.html" class="inline-block px-6 py-3 border border-white/60 hover:bg-white hover:text-[#4A1C6B] text-sm font-semibold rounded-2xl transition-colors">Volunteer Today</a>
                 </div>
-                
+
                 <div class="bg-white/10 hover:bg-white/15 transition-colors rounded-3xl p-8 text-left">
                     <i class="fa-brands fa-facebook-f text-4xl mb-5"></i>
                     <div class="font-semibold text-2xl mb-2">Follow &amp; Share</div>
                     <p class="text-white/75 text-sm mb-6">Stay updated on active searches and help spread the word when a dog goes missing. Your shares can save lives.</p>
-                    <div class="flex gap-x-3">
-                        <a href="https://www.facebook.com/p/Noodles-Canine-Rescue-NCR-IOM-61577324553552/" target="_blank" class="px-5 py-2.5 bg-white/90 text-[#4A1C6B] text-sm font-semibold rounded-2xl">Facebook</a>
-                        <a href="#" class="px-5 py-2.5 border border-white/50 text-sm font-semibold rounded-2xl">Instagram</a>
-                    </div>
+                    <a href="https://www.facebook.com/p/Noodles-Canine-Rescue-NCR-IOM-61577324553552/" target="_blank" class="px-5 py-2.5 bg-white/90 text-[#4A1C6B] text-sm font-semibold rounded-2xl inline-block">Facebook</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
     <footer class="bg-[#1A1A2E] text-white/70 py-12 text-sm">
         <div class="max-w-6xl mx-auto px-6">
             <div class="flex flex-col md:flex-row justify-between gap-y-8">
                 <div>
                     <div class="flex items-center gap-x-3 mb-4">
-                        <img src="ncr-logo.jpg" alt="NCR Logo" class="h-9 w-auto">
+                        <img src="ncr-logo.png" alt="NCR Logo" class="h-9 w-auto">
                         <div class="font-semibold text-white">Noodle’s Canine Rescue IOM</div>
                     </div>
-                    <div class="text-xs">Registered Charity No. 1387<br>Isle of Man • Est. 2025</div>
+                    <div class="text-xs">Registered Charity No. 1387<br>Isle of Man • Registered 4 June 2026</div>
                 </div>
-                
+
                 <div class="grid grid-cols-2 md:grid-cols-4 gap-x-10 gap-y-8 text-xs">
                     <div>
                         <div class="font-medium text-white mb-3 tracking-wider text-[10px]">EXPLORE</div>
                         <div class="space-y-[5px]">
                             <div><a href="about.html" class="hover:text-white">About Us</a></div>
-                            <div><a href="k9-first-aid.html" class="hover:text-white">K9 First Aid Training</a></div>
+                            <div><a href="k9-first-aid.html" class="hover:text-white">Canine First Aid Training</a></div>
                             <div><a href="news.html" class="hover:text-white">News &amp; Updates</a></div>
                         </div>
                     </div>
                     <div>
                         <div class="font-medium text-white mb-3 tracking-wider text-[10px]">GET INVOLVED</div>
                         <div class="space-y-[5px]">
-                            <div><a href="#get-involved" class="hover:text-white">Donate</a></div>
+                            <div><a href="mailto:noodlescaninerescue@gmail.com" class="hover:text-white">Support Our Work</a></div>
                             <div><a href="report-missing-dog.html" class="hover:text-white">Report Missing Dog</a></div>
-                            <div><a href="#get-involved" class="hover:text-white">Volunteer</a></div>
+                            <div><a href="volunteer.html" class="hover:text-white">Volunteer Today</a></div>
                         </div>
                     </div>
                     <div>
                         <div class="font-medium text-white mb-3 tracking-wider text-[10px]">CONTACT</div>
                         <div class="space-y-[5px]">
-                            <div>noodlescaninerescue@gmail.com</div>
+                            <div><a href="mailto:noodlescaninerescue@gmail.com" class="hover:text-white">noodlescaninerescue@gmail.com</a></div>
+                            <div>K. Quayle • A. O’Reilly • G. Bell</div>
                             <div>Isle of Man</div>
                             <div><a href="https://www.facebook.com/p/Noodles-Canine-Rescue-NCR-IOM-61577324553552/" target="_blank" class="hover:text-white">Facebook Page</a></div>
                         </div>
@@ -354,12 +333,11 @@
                         <div class="font-medium text-white mb-3 tracking-wider text-[10px]">FOLLOW US</div>
                         <div class="flex gap-x-4 text-lg">
                             <a href="https://www.facebook.com/p/Noodles-Canine-Rescue-NCR-IOM-61577324553552/" target="_blank" class="hover:text-white"><i class="fa-brands fa-facebook"></i></a>
-                            <a href="#" class="hover:text-white"><i class="fa-brands fa-instagram"></i></a>
                         </div>
                     </div>
                 </div>
             </div>
-            
+
             <div class="border-t border-white/10 mt-12 pt-8 text-[10px] flex flex-col md:flex-row justify-between items-center gap-y-2">
                 <div>© 2026 Noodle’s Canine Rescue IOM. All rights reserved.</div>
                 <div>Charity Registration No. 1387</div>

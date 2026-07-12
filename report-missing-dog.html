@@ -6,21 +6,23 @@
     <title>Report a Missing Dog | Noodle’s Canine Rescue IOM</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        .nav-link { transition: color 0.2s ease; }
+        .nav-link:hover { color: #C62828; }
+    </style>
 </head>
 <body class="bg-white font-sans text-gray-700">
 
-    <!-- Consistent Navigation Bar -->
     <nav class="bg-white border-b border-gray-100 sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-5">
             <div class="flex justify-between items-center h-20">
-                <!-- Logo -->
-                <div class="flex items-center gap-x-3">
-                    <img src="ncr-logo.jpg" alt="Noodle’s Canine Rescue Logo" class="h-10 w-auto">
+                <a href="index.html" class="flex items-center gap-x-3">
+                    <img src="ncr-logo.png" alt="Noodle’s Canine Rescue Logo" class="h-10 w-auto">
                     <div>
                         <div class="font-semibold text-lg tracking-tight text-[#4A1C6B]">Noodle’s Canine Rescue</div>
                         <div class="text-[9px] text-gray-500 -mt-1">ISLE OF MAN • CHARITY NO. 1387</div>
                     </div>
-                </div>
+                </a>
 
                 <!-- Desktop Menu -->
                 <div class="hidden md:flex items-center gap-x-7 text-sm font-medium">
@@ -32,7 +34,7 @@
                 </div>
 
                 <div class="flex items-center gap-x-3">
-                    <a href="#get-involved" class="px-5 py-2 text-sm font-semibold rounded-2xl bg-[#C62828] text-white hover:bg-[#a81f1f] transition-colors">
+                    <a href="volunteer.html" class="px-5 py-2 text-sm font-semibold rounded-2xl bg-[#C62828] text-white hover:bg-[#a81f1f] transition-colors">
                         Volunteer Today
                     </a>
                     <button id="burger-btn" class="md:hidden w-10 h-10 flex items-center justify-center text-gray-600">
@@ -51,7 +53,7 @@
                 <a href="report-missing-dog.html" class="py-2 text-[#C62828] font-semibold">Report Missing Dog</a>
                 <a href="news.html" class="py-2 text-gray-700">News &amp; Updates</a>
                 <div class="pt-3 border-t">
-                    <a href="#get-involved" class="py-2 text-[#C62828] font-semibold">Volunteer Today</a>
+                    <a href="volunteer.html" class="py-2 text-[#C62828] font-semibold">Volunteer Today</a>
                 </div>
             </div>
         </div>
@@ -145,14 +147,15 @@
 
         <div class="text-center mt-8 text-sm text-gray-500">
             Backup contact: <a href="mailto:noodlescaninerescue@gmail.com?subject=Missing%20Dog%20Report" class="text-[#4A1C6B] font-semibold">noodlescaninerescue@gmail.com</a><br>
-            Follow our Facebook page for active search alerts.
+            Follow our <a href="https://www.facebook.com/p/Noodles-Canine-Rescue-NCR-IOM-61577324553552/" target="_blank" class="text-[#4A1C6B] font-semibold">Facebook page</a> for active search alerts.
         </div>
     </div>
 
     <footer class="bg-[#1A1A2E] text-white/70 py-10 text-sm">
         <div class="max-w-6xl mx-auto px-5 text-center">
-            <img src="ncr-logo.jpg" alt="NCR Logo" class="h-8 w-auto mx-auto mb-4">
+            <img src="ncr-logo.png" alt="NCR Logo" class="h-8 w-auto mx-auto mb-4">
             <div>Noodle’s Canine Rescue IOM • Charity No. 1387</div>
+            <div class="text-xs mt-2">K. Quayle • A. O’Reilly • G. Bell • <a href="mailto:noodlescaninerescue@gmail.com" class="hover:text-white">noodlescaninerescue@gmail.com</a></div>
         </div>
     </footer>
 </body>

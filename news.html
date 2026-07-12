@@ -6,20 +6,23 @@
     <title>News &amp; Updates | Noodle’s Canine Rescue IOM</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        .nav-link { transition: color 0.2s ease; }
+        .nav-link:hover { color: #C62828; }
+    </style>
 </head>
 <body class="bg-white font-sans text-gray-700">
 
-    <!-- Consistent Navigation Bar -->
     <nav class="bg-white border-b border-gray-100 sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-5">
             <div class="flex justify-between items-center h-20">
-                <div class="flex items-center gap-x-3">
-                    <img src="ncr-logo.jpg" alt="Noodle’s Canine Rescue Logo" class="h-10 w-auto">
+                <a href="index.html" class="flex items-center gap-x-3">
+                    <img src="ncr-logo.png" alt="Noodle’s Canine Rescue Logo" class="h-10 w-auto">
                     <div>
                         <div class="font-semibold text-lg tracking-tight text-[#4A1C6B]">Noodle’s Canine Rescue</div>
                         <div class="text-[9px] text-gray-500 -mt-1">ISLE OF MAN • CHARITY NO. 1387</div>
                     </div>
-                </div>
+                </a>
 
                 <div class="hidden md:flex items-center gap-x-7 text-sm font-medium">
                     <a href="index.html" class="nav-link text-gray-700">Home</a>
@@ -30,7 +33,7 @@
                 </div>
 
                 <div class="flex items-center gap-x-3">
-                    <a href="#get-involved" class="px-5 py-2 text-sm font-semibold rounded-2xl bg-[#C62828] text-white hover:bg-[#a81f1f] transition-colors">
+                    <a href="volunteer.html" class="px-5 py-2 text-sm font-semibold rounded-2xl bg-[#C62828] text-white hover:bg-[#a81f1f] transition-colors">
                         Volunteer Today
                     </a>
                     <button id="burger-btn" class="md:hidden w-10 h-10 flex items-center justify-center text-gray-600">
@@ -40,7 +43,6 @@
             </div>
         </div>
 
-        <!-- Mobile Menu -->
         <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
             <div class="px-5 py-4 flex flex-col gap-y-2 text-sm font-medium">
                 <a href="index.html" class="py-2 text-gray-700">Home</a>
@@ -49,7 +51,7 @@
                 <a href="report-missing-dog.html" class="py-2 text-gray-700">Report Missing Dog</a>
                 <a href="news.html" class="py-2 text-[#4A1C6B] font-semibold">News &amp; Updates</a>
                 <div class="pt-3 border-t">
-                    <a href="#get-involved" class="py-2 text-[#C62828] font-semibold">Volunteer Today</a>
+                    <a href="volunteer.html" class="py-2 text-[#C62828] font-semibold">Volunteer Today</a>
                 </div>
             </div>
         </div>
@@ -58,25 +60,17 @@
     <script>
         const burgerBtn = document.getElementById('burger-btn');
         const mobileMenu = document.getElementById('mobile-menu');
-
         burgerBtn.addEventListener('click', () => {
             mobileMenu.classList.toggle('hidden');
             const icon = burgerBtn.querySelector('i');
-            if (mobileMenu.classList.contains('hidden')) {
-                icon.classList.remove('fa-times');
-                icon.classList.add('fa-bars');
-            } else {
-                icon.classList.remove('fa-bars');
-                icon.classList.add('fa-times');
-            }
+            icon.classList.toggle('fa-bars');
+            icon.classList.toggle('fa-times');
         });
-
         document.querySelectorAll('#mobile-menu a').forEach(link => {
             link.addEventListener('click', () => {
                 mobileMenu.classList.add('hidden');
-                const icon = burgerBtn.querySelector('i');
-                icon.classList.remove('fa-times');
-                icon.classList.add('fa-bars');
+                burgerBtn.querySelector('i').classList.add('fa-bars');
+                burgerBtn.querySelector('i').classList.remove('fa-times');
             });
         });
     </script>
@@ -91,38 +85,35 @@
     <div class="max-w-4xl mx-auto px-5 py-14">
         <div class="space-y-8">
 
-            <!-- News Item 1 -->
             <div class="border border-gray-200 rounded-3xl p-8">
                 <div class="flex items-center gap-x-3 text-sm text-gray-500 mb-3">
                     <span class="font-medium">4 June 2026</span>
                     <span class="px-3 py-0.5 bg-green-100 text-green-700 rounded-full text-xs font-semibold">MILESTONE</span>
                 </div>
                 <h3 class="text-2xl font-semibold mb-3">Officially Registered as Charity No. 1387</h3>
-                <p class="text-gray-600">We are delighted to announce that Noodle’s Canine Rescue IOM has been officially registered as an Isle of Man charity (No. 1387). This milestone, just over a year after our formation, recognises the hard work of our volunteers and the vital service we provide to the Island’s dogs and families. We thank everyone who supported the registration process.</p>
+                <p class="text-gray-600">We are delighted to announce that Noodle’s Canine Rescue has been officially registered as an Isle of Man charity (No. 1387). This milestone, just over a year after our formation, recognises the hard work of our volunteers and the vital service we provide to the Island’s dogs and families. We thank everyone who supported the registration process.</p>
                 <p class="mt-3 text-sm text-gray-500">This status strengthens our governance, fundraising capability and ability to collaborate with emergency services.</p>
             </div>
 
-            <!-- News Item 2 -->
             <div class="border border-gray-200 rounded-3xl p-8">
                 <div class="flex items-center gap-x-3 text-sm text-gray-500 mb-3">
                     <span class="font-medium">January 2026</span>
                     <span class="px-3 py-0.5 bg-blue-100 text-blue-700 rounded-full text-xs font-semibold">OPERATION</span>
                 </div>
                 <h3 class="text-2xl font-semibold mb-3">Successful Recovery of Toffee – 50+ Hour Multi-Agency Search</h3>
-                <p class="text-gray-600">Our teams led a complex search for a missing dachshund in treacherous Foxdale and St Marks Country Park terrain. Working alongside landowners, police, coastguard, Castletown fire station and dozens of public volunteers, thermal drones played a crucial role in locating the dog after more than 50 hours missing. The happy reunion was a powerful reminder of the value of coordinated canine search and rescue.</p>
+                <p class="text-gray-600">Our teams led a complex search for a missing dachshund in treacherous Foxdale and St Marks Country Park terrain. Working alongside landowners, police, coastguard, and dozens of public volunteers, thermal drones played a crucial role in locating the dog after more than 50 hours missing. The happy reunion was a powerful reminder of the value of coordinated canine search and rescue.</p>
                 <p class="mt-3 text-sm"><a href="https://www.bbc.com/news/articles/c2052dk13z6o" target="_blank" class="text-[#C62828] font-semibold">Read the BBC coverage →</a></p>
             </div>
 
-            <!-- News Item 3 -->
             <div class="border border-gray-200 rounded-3xl p-8">
                 <div class="flex items-center gap-x-3 text-sm text-gray-500 mb-3">
                     <span class="font-medium">2025–2026 Season</span>
                     <span class="px-3 py-0.5 bg-purple-100 text-purple-700 rounded-full text-xs font-semibold">STATISTICS</span>
                 </div>
                 <h3 class="text-2xl font-semibold mb-3">Strong Track Record of Success</h3>
-                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-center mt-4">
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-4 text-center mt-4">
                     <div class="bg-white p-4 rounded-2xl border">
-                        <div class="text-3xl font-semibold text-[#4A1C6B]">22+</div>
+                        <div class="text-3xl font-semibold text-[#4A1C6B]">55</div>
                         <div class="text-xs text-gray-500 mt-1">Missing Dog Reports Handled</div>
                     </div>
                     <div class="bg-white p-4 rounded-2xl border">
@@ -130,25 +121,28 @@
                         <div class="text-xs text-gray-500 mt-1">Recovery Rate</div>
                     </div>
                     <div class="bg-white p-4 rounded-2xl border">
-                        <div class="text-3xl font-semibold text-[#4A1C6B]">15+</div>
+                        <div class="text-3xl font-semibold text-[#4A1C6B]">4</div>
                         <div class="text-xs text-gray-500 mt-1">Dogs Located by Thermal Drone</div>
                     </div>
                     <div class="bg-white p-4 rounded-2xl border">
-                        <div class="text-3xl font-semibold text-[#4A1C6B]">20+</div>
-                        <div class="text-xs text-gray-500 mt-1">Active Searches in 2025</div>
+                        <div class="text-3xl font-semibold text-[#4A1C6B]">14</div>
+                        <div class="text-xs text-gray-500 mt-1">Searches the drone has been deployed on</div>
+                    </div>
+                    <div class="bg-white p-4 rounded-2xl border md:col-span-2">
+                        <div class="text-3xl font-semibold text-[#4A1C6B]">25</div>
+                        <div class="text-xs text-gray-500 mt-1">Active Searches in June 25/June 26</div>
                     </div>
                 </div>
-                <p class="mt-4 text-sm text-gray-600">These results demonstrate the effectiveness of combining professional thermal drone operations with trained ground teams and scent dogs on the Isle of Man.</p>
+                <p class="mt-4 text-sm text-gray-600">These results demonstrate the effectiveness of combining professional thermal drone operations with trained ground teams and training scent dogs on the Isle of Man.</p>
             </div>
 
-            <!-- News Item 4 -->
             <div class="border border-gray-200 rounded-3xl p-8">
                 <div class="flex items-center gap-x-3 text-sm text-gray-500 mb-3">
                     <span class="font-medium">Ongoing</span>
                     <span class="px-3 py-0.5 bg-amber-100 text-amber-700 rounded-full text-xs font-semibold">TRAINING</span>
                 </div>
                 <h3 class="text-2xl font-semibold mb-3">Noodle’s Scent Dog Training Progress &amp; Team Development</h3>
-                <p class="text-gray-600">Our collie Noodle continues her advanced scent discrimination training and is making excellent progress toward becoming a fully qualified search dog for the organisation. Meanwhile, drone pilots and ground team members are undertaking ongoing certifications and practical exercises to maintain the highest operational standards.</p>
+                <p class="text-gray-600">Our collie Noodle continues her scent discrimination training and is making excellent progress toward becoming a fully qualified search dog for the organisation. Meanwhile, drone pilots and ground team members are undertaking ongoing certifications and practical exercises to maintain the highest operational standards.</p>
             </div>
 
         </div>
@@ -156,8 +150,9 @@
 
     <footer class="bg-[#1A1A2E] text-white/70 py-10 text-sm">
         <div class="max-w-6xl mx-auto px-5 text-center">
-            <img src="ncr-logo.jpg" alt="NCR Logo" class="h-8 w-auto mx-auto mb-4">
+            <img src="ncr-logo.png" alt="NCR Logo" class="h-8 w-auto mx-auto mb-4">
             <div>Noodle’s Canine Rescue IOM • Charity No. 1387</div>
+            <div class="text-xs mt-2">K. Quayle • A. O’Reilly • G. Bell • <a href="mailto:noodlescaninerescue@gmail.com" class="hover:text-white">noodlescaninerescue@gmail.com</a></div>
         </div>
     </footer>
 </body>

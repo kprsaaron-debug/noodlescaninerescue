@@ -3,23 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>K9 First Aid Training | Noodle’s Canine Rescue IOM</title>
+    <title>Canine First Aid Training | Noodle’s Canine Rescue IOM</title>
+    <meta name="description" content="Professional canine first aid courses delivered by Noodle’s Canine Rescue IOM. Level 2 and Level 3 VTQ certified training for dog owners, handlers and professionals.">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        .nav-link { transition: color 0.2s ease; }
+        .nav-link:hover { color: #C62828; }
+    </style>
 </head>
 <body class="bg-white font-sans text-gray-700">
 
-    <!-- Consistent Navigation Bar -->
     <nav class="bg-white border-b border-gray-100 sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-5">
             <div class="flex justify-between items-center h-20">
-                <div class="flex items-center gap-x-3">
-                    <img src="ncr-logo.jpg" alt="Noodle’s Canine Rescue Logo" class="h-10 w-auto">
+                <a href="index.html" class="flex items-center gap-x-3">
+                    <img src="ncr-logo.png" alt="Noodle’s Canine Rescue Logo" class="h-10 w-auto">
                     <div>
                         <div class="font-semibold text-lg tracking-tight text-[#4A1C6B]">Noodle’s Canine Rescue</div>
                         <div class="text-[9px] text-gray-500 -mt-1">ISLE OF MAN • CHARITY NO. 1387</div>
                     </div>
-                </div>
+                </a>
 
                 <div class="hidden md:flex items-center gap-x-7 text-sm font-medium">
                     <a href="index.html" class="nav-link text-gray-700">Home</a>
@@ -30,7 +34,7 @@
                 </div>
 
                 <div class="flex items-center gap-x-3">
-                    <a href="#get-involved" class="px-5 py-2 text-sm font-semibold rounded-2xl bg-[#C62828] text-white hover:bg-[#a81f1f] transition-colors">
+                    <a href="volunteer.html" class="px-5 py-2 text-sm font-semibold rounded-2xl bg-[#C62828] text-white hover:bg-[#a81f1f] transition-colors">
                         Volunteer Today
                     </a>
                     <button id="burger-btn" class="md:hidden w-10 h-10 flex items-center justify-center text-gray-600">
@@ -40,7 +44,6 @@
             </div>
         </div>
 
-        <!-- Mobile Menu -->
         <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
             <div class="px-5 py-4 flex flex-col gap-y-2 text-sm font-medium">
                 <a href="index.html" class="py-2 text-gray-700">Home</a>
@@ -49,7 +52,7 @@
                 <a href="report-missing-dog.html" class="py-2 text-gray-700">Report Missing Dog</a>
                 <a href="news.html" class="py-2 text-gray-700">News &amp; Updates</a>
                 <div class="pt-3 border-t">
-                    <a href="#get-involved" class="py-2 text-[#C62828] font-semibold">Volunteer Today</a>
+                    <a href="volunteer.html" class="py-2 text-[#C62828] font-semibold">Volunteer Today</a>
                 </div>
             </div>
         </div>
@@ -58,136 +61,168 @@
     <script>
         const burgerBtn = document.getElementById('burger-btn');
         const mobileMenu = document.getElementById('mobile-menu');
-
         burgerBtn.addEventListener('click', () => {
             mobileMenu.classList.toggle('hidden');
             const icon = burgerBtn.querySelector('i');
-            if (mobileMenu.classList.contains('hidden')) {
-                icon.classList.remove('fa-times');
-                icon.classList.add('fa-bars');
-            } else {
-                icon.classList.remove('fa-bars');
-                icon.classList.add('fa-times');
-            }
+            icon.classList.toggle('fa-bars');
+            icon.classList.toggle('fa-times');
         });
-
         document.querySelectorAll('#mobile-menu a').forEach(link => {
             link.addEventListener('click', () => {
                 mobileMenu.classList.add('hidden');
-                const icon = burgerBtn.querySelector('i');
-                icon.classList.remove('fa-times');
-                icon.classList.add('fa-bars');
+                burgerBtn.querySelector('i').classList.add('fa-bars');
+                burgerBtn.querySelector('i').classList.remove('fa-times');
             });
         });
     </script>
 
     <div class="bg-[#F8F5F2] py-14">
         <div class="max-w-4xl mx-auto px-5 text-center">
-            <h1 class="text-5xl tracking-tighter text-[#4A1C6B] font-semibold mb-4">K9 First Aid Training</h1>
-            <p class="text-lg text-gray-600">Professional courses delivered by qualified instructors from Noodle’s Canine Rescue IOM</p>
+            <h1 class="text-5xl tracking-tighter text-[#4A1C6B] font-semibold mb-4">Canine First Aid Training</h1>
+            <p class="text-lg text-gray-600">Professional courses delivered by a qualified instructor from Noodle’s Canine Rescue</p>
         </div>
     </div>
 
-    <div class="max-w-6xl mx-auto px-5 py-14">
-        <div class="text-center mb-10">
-            <p class="max-w-2xl mx-auto text-gray-600">Our K9 First Aid courses equip dog owners, handlers and professionals with the skills to respond confidently in emergencies. All training emphasises practical skills, animal welfare and when to seek veterinary help. Courses are suitable for the Isle of Man context (rural, coastal and working environments).</p>
+    <div class="max-w-4xl mx-auto px-5 py-10">
+        <div class="prose prose-lg max-w-none text-gray-600 space-y-4">
+            <p>The courses may contain the following depending on the level to which you require.</p>
+            <p>Throughout the course, you will explore essential topics such as pet first aid and the law, understanding the role of veterinarians in emergencies, and recognising when veterinary care is required.</p>
+            <p>You will learn how to keep pets safe during emergency situations, identify signs of pain in pets, and conduct basic health checks to establish a baseline for their well-being.</p>
+            <p>Additionally, you will master the technique of taking a pulse and understand the importance of pet first aid kits in emergency response.</p>
+            <p>The course will extensively cover CPR, pet accidents, and first aid, including breathing and respiratory problems. You will be introduced to pet CPR, learning the steps and techniques necessary to resuscitate a pet in cardiac or respiratory arrest.</p>
+            <p>Through practical demonstrations and hands-on training, you will gain the confidence to perform pet CPR effectively in critical situations. Furthermore, you will delve into specific medical conditions that commonly affect pets, enabling you to recognise signs, provide immediate relief, and understand when specialised veterinary care is necessary.</p>
+            <p>The course will also focus on different types of bleeding and teach you how to control and manage bleeding through dressings, bandages, and the application of pet wrap bandages.</p>
+            <p>You will develop proficiency in addressing paw problems, nail and claw injuries, as well as bandaging the ear and tail in case of injuries.</p>
+            <p>In addition to these critical topics, the course will cover dehydration in pets, high temperatures, and heatstroke, as well as the treatment of hypothermia.</p>
+            <p>You will gain insights into recognising and responding to these potentially life-threatening situations when providing emergency services.</p>
+            <p>By the end of this course, you will be equipped with a comprehensive understanding of emergency pet services and first aid. You will possess the knowledge and skills necessary to provide immediate assistance in various emergency scenarios, including CPR, stabilising fractures, addressing spinal injuries, and managing medical conditions.</p>
+            <p>Join us on this educational journey and become a competent and compassionate provider of emergency services for pets in need.</p>
         </div>
+    </div>
 
+    <div class="max-w-6xl mx-auto px-5 pb-14">
         <h2 class="text-3xl font-semibold text-[#4A1C6B] mb-8 text-center">Our Training Courses</h2>
 
-        <div class="grid md:grid-cols-2 gap-8">
-            
-            <!-- Level 2 Dog First Aid -->
-            <div class="border border-gray-200 rounded-3xl p-8 hover:border-[#4A1C6B] transition-colors flex flex-col">
-                <div class="flex items-center gap-x-4 mb-6">
-                    <div class="w-14 h-14 bg-[#4A1C6B] rounded-2xl flex items-center justify-center flex-shrink-0">
-                        <i class="fa-solid fa-first-aid text-white text-3xl"></i>
-                    </div>
+        <div class="grid md:grid-cols-2 gap-6">
+
+            <!-- Level 2 Canine First Aid -->
+            <div class="border border-gray-200 rounded-3xl p-7 hover:border-[#4A1C6B] transition-colors flex flex-col">
+                <div class="flex items-start gap-x-4 mb-4">
+                    <img src="level2-first-aid-card.png" alt="Level 2 Canine First Aid" class="w-16 h-16 object-contain flex-shrink-0">
                     <div>
-                        <div class="font-bold text-2xl">Level 2 Dog First Aid</div>
-                        <div class="text-sm text-gray-500">For dog owners, walkers &amp; handlers</div>
+                        <div class="font-bold text-xl text-[#4A1C6B]">Level 2 Canine First Aid (VTQ)™️</div>
                     </div>
                 </div>
-                
-                <p class="text-gray-600 mb-6">Essential first aid skills for everyday situations. Ideal for pet owners, dog walkers, groomers and anyone who wants to be prepared for common canine emergencies.</p>
-                
-                <div class="mb-6">
-                    <div class="text-sm font-semibold mb-2 text-[#4A1C6B]">What you will learn:</div>
-                    <ul class="text-sm text-gray-600 space-y-1.5 list-disc list-inside">
-                        <li>Recognising signs of emergency &amp; primary survey (ABC)</li>
-                        <li>Canine CPR, rescue breathing and choking (Heimlich manoeuvre)</li>
-                        <li>Controlling bleeding, treating shock and wound care</li>
-                        <li>Poisoning, heatstroke, hypothermia and seizures</li>
-                        <li>Bandaging, splinting and safe transport to vet</li>
-                        <li>When and how to contact emergency veterinary services</li>
-                    </ul>
+                <p class="text-sm text-gray-600 mb-5">This course is aimed at anyone who requires a course in first aid for dogs. It is ideal for dog owners or dog professionals. Understanding basic first aid for your dog will give you the skills to assist them and prevent them from getting worse before your vet gives professional help. The certificate is valid for three years.</p>
+                <div class="text-sm space-y-1 mb-5 border-t pt-4 mt-auto">
+                    <div class="flex justify-between"><span>Duration</span><span class="font-medium">1 Day (6 hours)</span></div>
+                    <div class="flex justify-between"><span>Format</span><span class="font-medium">Theory + Practical</span></div>
+                    <div class="flex justify-between"><span>Certification</span><span class="font-medium">Level 2 Award (valid 3 years)</span></div>
+                    <div class="flex justify-between"><span>Cost</span><span class="font-medium">£40 per person</span></div>
                 </div>
-                
-                <div class="mt-auto">
-                    <div class="text-sm space-y-1 mb-6 border-t pt-4">
-                        <div class="flex justify-between"><span>Duration</span> <span class="font-medium">1 Day (8 hours)</span></div>
-                        <div class="flex justify-between"><span>Format</span> <span class="font-medium">Theory + Practical</span></div>
-                        <div class="flex justify-between"><span>Certification</span> <span class="font-medium">Level 2 Award (valid 3 years)</span></div>
-                        <div class="flex justify-between"><span>Cost</span> <span class="font-medium">Contact for current pricing</span></div>
-                    </div>
-                    
-                    <a href="report-missing-dog.html" class="inline-block w-full text-center px-6 py-3 bg-[#4A1C6B] text-white font-semibold rounded-2xl hover:bg-[#3a1655] transition-colors">Enquire / Book Level 2</a>
-                </div>
+                <a href="mailto:noodlescaninerescue@gmail.com?subject=Enquiry%3A%20Level%202%20Canine%20First%20Aid" class="inline-block w-full text-center px-6 py-3 bg-[#4A1C6B] text-white font-semibold rounded-2xl hover:bg-[#3a1655] transition-colors">Enquire / Book Level 2</a>
             </div>
 
-            <!-- Level 3 Dog First Aid -->
-            <div class="border border-gray-200 rounded-3xl p-8 hover:border-[#4A1C6B] transition-colors flex flex-col">
-                <div class="flex items-center gap-x-4 mb-6">
-                    <div class="w-14 h-14 bg-[#4A1C6B] rounded-2xl flex items-center justify-center flex-shrink-0">
-                        <i class="fa-solid fa-shield-alt text-white text-3xl"></i>
-                    </div>
-                    <div>
-                        <div class="font-bold text-2xl">Level 3 Dog First Aid</div>
-                        <div class="text-sm text-gray-500">For security dog handlers &amp; professionals</div>
-                    </div>
+            <!-- Level 2 Outdoor Dog First Aid -->
+            <div class="border border-gray-200 rounded-3xl p-7 hover:border-[#4A1C6B] transition-colors flex flex-col">
+                <div class="font-bold text-xl text-[#4A1C6B] mb-4">Level 2 Outdoor Dog First Aid (VTQ)™️</div>
+                <p class="text-sm text-gray-600 mb-5">This course is aimed at people who work with outdoor working dogs. It is ideal for dog owners or dog professionals. Understanding basic first aid for your dog will give you the skills to assist them and prevent them from getting worse before professional help is given by your vet. The certificate is valid for 3 years.</p>
+                <div class="text-sm space-y-1 mb-5 border-t pt-4 mt-auto">
+                    <div class="flex justify-between"><span>Duration</span><span class="font-medium">1 Day (6 hours)</span></div>
+                    <div class="flex justify-between"><span>Format</span><span class="font-medium">Theory + Practical</span></div>
+                    <div class="flex justify-between"><span>Certification</span><span class="font-medium">Level 2 Award (valid 3 years)</span></div>
+                    <div class="flex justify-between"><span>Cost</span><span class="font-medium">£45 per person</span></div>
                 </div>
-                
-                <p class="text-gray-600 mb-6">Advanced training tailored for professional handlers, security dog teams, kennel staff and those working in remote or operational environments. Builds on Level 2 with trauma-focused content relevant to working dogs on the Isle of Man.</p>
-                
-                <div class="mb-6">
-                    <div class="text-sm font-semibold mb-2 text-[#4A1C6B]">What you will learn:</div>
-                    <ul class="text-sm text-gray-600 space-y-1.5 list-disc list-inside">
-                        <li>Advanced triage and incident management</li>
-                        <li>Trauma care: fractures, crush injuries, penetrating wounds</li>
-                        <li>Working dog specific injuries (terrain, fatigue, environmental)</li>
-                        <li>Remote location considerations and evacuation planning</li>
-                        <li>Integration with emergency services and incident command</li>
-                        <li>Legal, insurance and welfare responsibilities for professional handlers</li>
-                    </ul>
+                <p class="text-xs text-gray-500 mb-4">Please contact us if you have a group as we can offer a group discount.</p>
+                <a href="mailto:noodlescaninerescue@gmail.com?subject=Enquiry%3A%20Level%202%20Outdoor%20Dog%20First%20Aid" class="inline-block w-full text-center px-6 py-3 bg-[#4A1C6B] text-white font-semibold rounded-2xl hover:bg-[#3a1655] transition-colors">Enquire / Book Level 2</a>
+            </div>
+
+            <!-- Level 2 Pet First Aid For Emergency Services -->
+            <div class="border border-gray-200 rounded-3xl p-7 hover:border-[#4A1C6B] transition-colors flex flex-col">
+                <div class="font-bold text-xl text-[#4A1C6B] mb-4">Level 2 Pet First Aid For Emergency Services (VTQ)™️</div>
+                <p class="text-sm text-gray-600 mb-5">This course is designed to provide emergency service professionals with the knowledge and skills necessary to effectively respond to pet-related emergencies. As an emergency service provider, it is crucial to be equipped with the tools and understanding to provide immediate assistance to pets in distress. This course aims to empower you to confidently handle various emergency situations involving pets and ensure their well-being.</p>
+                <div class="text-sm space-y-1 mb-5 border-t pt-4 mt-auto">
+                    <div class="flex justify-between"><span>Duration</span><span class="font-medium">1 Day (6 hours)</span></div>
+                    <div class="flex justify-between"><span>Format</span><span class="font-medium">Theory + Practical</span></div>
+                    <div class="flex justify-between"><span>Certification</span><span class="font-medium">Level 2 Award (valid 3 years)</span></div>
+                    <div class="flex justify-between"><span>Cost</span><span class="font-medium">£45 per person</span></div>
                 </div>
-                
-                <div class="mt-auto">
-                    <div class="text-sm space-y-1 mb-6 border-t pt-4">
-                        <div class="flex justify-between"><span>Duration</span> <span class="font-medium">2 Days (16 hours)</span></div>
-                        <div class="flex justify-between"><span>Format</span> <span class="font-medium">Theory + Extended Practical</span></div>
-                        <div class="flex justify-between"><span>Certification</span> <span class="font-medium">Level 3 Award (valid 3 years)</span></div>
-                        <div class="flex justify-between"><span>Cost</span> <span class="font-medium">Contact for current pricing &amp; group rates</span></div>
-                    </div>
-                    
-                    <a href="report-missing-dog.html" class="inline-block w-full text-center px-6 py-3 bg-[#4A1C6B] text-white font-semibold rounded-2xl hover:bg-[#3a1655] transition-colors">Enquire / Book Level 3</a>
+                <p class="text-xs text-gray-500 mb-4">Please contact us if you have a group as we can offer a group discount.</p>
+                <a href="mailto:noodlescaninerescue@gmail.com?subject=Enquiry%3A%20Level%202%20Pet%20First%20Aid%20For%20Emergency%20Services" class="inline-block w-full text-center px-6 py-3 bg-[#4A1C6B] text-white font-semibold rounded-2xl hover:bg-[#3a1655] transition-colors">Enquire / Book Level 2</a>
+            </div>
+
+            <!-- Security Dog First Aid Level 2 -->
+            <div class="border border-gray-200 rounded-3xl p-7 hover:border-[#4A1C6B] transition-colors flex flex-col">
+                <div class="font-bold text-xl text-[#4A1C6B] mb-4">Security Dog First Aid Level 2 (VTQ)™️</div>
+                <p class="text-sm text-gray-600 mb-5">This course is approved by NASDU for the requirement of pet first aid in their standards. First aid is important to know for your security dog not only to comply with associations and local authorities but also for animal welfare and to help a dog in need. The nature of working with dogs will pose a risk that they may be harmed in the course of their work or transport.</p>
+                <div class="text-sm space-y-1 mb-5 border-t pt-4 mt-auto">
+                    <div class="flex justify-between"><span>Duration</span><span class="font-medium">1 Day (6 hours)</span></div>
+                    <div class="flex justify-between"><span>Format</span><span class="font-medium">Theory + Practical</span></div>
+                    <div class="flex justify-between"><span>Certification</span><span class="font-medium">Level 2 Award (valid 3 years)</span></div>
+                    <div class="flex justify-between"><span>Cost</span><span class="font-medium">£45 per person</span></div>
                 </div>
+                <p class="text-xs text-gray-500 mb-4">Please contact us if you have a group as we can offer a group discount.</p>
+                <a href="mailto:noodlescaninerescue@gmail.com?subject=Enquiry%3A%20Security%20Dog%20First%20Aid%20Level%202" class="inline-block w-full text-center px-6 py-3 bg-[#4A1C6B] text-white font-semibold rounded-2xl hover:bg-[#3a1655] transition-colors">Enquire / Book Level 2</a>
+            </div>
+
+            <!-- Canine First Aid for Hydrotherapists Level 3 -->
+            <div class="border border-gray-200 rounded-3xl p-7 hover:border-[#4A1C6B] transition-colors flex flex-col">
+                <div class="font-bold text-xl text-[#4A1C6B] mb-4">Canine First Aid for Hydrotherapists Level 3 (VTQ)™️</div>
+                <p class="text-sm text-gray-500 mb-4">Classroom Training Course</p>
+                <div class="text-sm space-y-1 mb-5 border-t pt-4 mt-auto">
+                    <div class="flex justify-between"><span>Duration</span><span class="font-medium">1 Day (8 hours)</span></div>
+                    <div class="flex justify-between"><span>Format</span><span class="font-medium">Theory + Practical</span></div>
+                    <div class="flex justify-between"><span>Certification</span><span class="font-medium">Level 2 Award (valid 3 years)</span></div>
+                    <div class="flex justify-between"><span>Cost</span><span class="font-medium">£65 per person</span></div>
+                </div>
+                <p class="text-xs text-gray-500 mb-4">Please contact us if you have a group as we can offer a group discount.</p>
+                <a href="mailto:noodlescaninerescue@gmail.com?subject=Enquiry%3A%20Canine%20First%20Aid%20for%20Hydrotherapists%20Level%203" class="inline-block w-full text-center px-6 py-3 bg-[#4A1C6B] text-white font-semibold rounded-2xl hover:bg-[#3a1655] transition-colors">Enquire / Book Level 3</a>
+            </div>
+
+            <!-- Advanced Pet First Aid Level 3 -->
+            <div class="border border-gray-200 rounded-3xl p-7 hover:border-[#4A1C6B] transition-colors flex flex-col">
+                <div class="font-bold text-xl text-[#4A1C6B] mb-4">Advanced Pet First Aid Level 3 (VTQ)™️ - Classroom Blended Part 2</div>
+                <p class="text-sm text-gray-500 mb-2">Classroom Training Course</p>
+                <p class="text-sm text-gray-600 mb-5">Learn the techniques for a wide range of emergencies your pets may get into with this engaging ProTrainings Course run by Noodles Canine Rescue.</p>
+                <div class="text-sm space-y-1 mb-5 border-t pt-4">
+                    <div class="flex justify-between"><span>Duration</span><span class="font-medium text-right">Total 2 Days (16 hours)</span></div>
+                    <div class="flex justify-between"><span>Format</span><span class="font-medium">Theory + Extended Practical</span></div>
+                    <div class="flex justify-between"><span>Certification</span><span class="font-medium">Level 3 Award (valid 3 years)</span></div>
+                </div>
+                <p class="text-sm text-gray-600 mb-4">This is a blended course. Part 1 is purchased online for £34.95 + VAT and completed at home (around 8 hours, video tutorials and online exams). Part 2 is in the classroom at £120 per person (around 8 hours including breaks, with demonstrations and practical hands-on first aid).</p>
+                <p class="text-sm font-medium text-[#4A1C6B] mb-4">£100 for volunteers of Noodle’s Canine Rescue (classroom part).</p>
+                <a href="mailto:noodlescaninerescue@gmail.com?subject=Enquiry%3A%20Advanced%20Pet%20First%20Aid%20Level%203" class="inline-block w-full text-center px-6 py-3 bg-[#4A1C6B] text-white font-semibold rounded-2xl hover:bg-[#3a1655] transition-colors mt-auto">Enquire / Book Level 3</a>
+            </div>
+
+            <!-- Pet First Aid for Pet Professionals Level 3 -->
+            <div class="border border-gray-200 rounded-3xl p-7 hover:border-[#4A1C6B] transition-colors flex flex-col md:col-span-2">
+                <div class="font-bold text-xl text-[#4A1C6B] mb-4">Pet First Aid for Pet Professionals Level 3 (VTQ)™️ - Classroom Blended Part 2</div>
+                <div class="text-sm space-y-1 mb-5">
+                    <div class="flex justify-between"><span>Duration</span><span class="font-medium">Total 2 Days (16 hours)</span></div>
+                    <div class="flex justify-between"><span>Format</span><span class="font-medium">Theory + Extended Practical</span></div>
+                    <div class="flex justify-between"><span>Certification</span><span class="font-medium">Level 3 Award (valid 3 years)</span></div>
+                </div>
+                <p class="text-sm text-gray-600 mb-4">This is a blended course. Part 1 is purchased online for £34.95 + VAT and completed at home (around 8 hours, video tutorials and online exams). Part 2 is in the classroom at £120 per person (around 8 hours including breaks, with demonstrations and practical hands-on first aid).</p>
+                <p class="text-sm font-medium text-[#4A1C6B] mb-4">£100 for volunteers of Noodle’s Canine Rescue (classroom part).</p>
+                <a href="mailto:noodlescaninerescue@gmail.com?subject=Enquiry%3A%20Pet%20First%20Aid%20for%20Pet%20Professionals%20Level%203" class="inline-block w-full md:w-auto text-center px-6 py-3 bg-[#4A1C6B] text-white font-semibold rounded-2xl hover:bg-[#3a1655] transition-colors">Enquire / Book Level 3</a>
             </div>
 
         </div>
 
         <div class="mt-12 max-w-3xl mx-auto text-center">
-            <div class="bg-white border border-gray-200 rounded-3xl p-8">
-                <p class="text-gray-600">All courses are delivered by qualified instructors from the Noodle’s Canine Rescue team who bring real operational experience from canine search and rescue on the Isle of Man.</p>
-                <p class="mt-3 text-sm"><strong>Group bookings, custom training and volunteer subsidies available.</strong></p>
-                <a href="report-missing-dog.html" class="inline-block mt-4 text-[#C62828] font-semibold">Contact us to discuss dates, pricing or bespoke training →</a>
+            <div class="bg-[#F8F5F2] border border-gray-200 rounded-3xl p-8">
+                <p class="text-gray-600">All courses are delivered by a qualified instructor from the Noodle’s Canine Rescue team who brings real operational experience from canine search and rescue on the Isle of Man.</p>
+                <p class="mt-3 text-sm font-semibold text-[#4A1C6B]">Group bookings, custom training and volunteer subsidies available.</p>
+                <a href="mailto:noodlescaninerescue@gmail.com?subject=Canine%20First%20Aid%20Training%20Enquiry" class="inline-block mt-4 text-[#C62828] font-semibold">Contact us to discuss dates, pricing →</a>
             </div>
         </div>
     </div>
 
     <footer class="bg-[#1A1A2E] text-white/70 py-10 text-sm">
         <div class="max-w-6xl mx-auto px-5 text-center">
-            <img src="ncr-logo.jpg" alt="NCR Logo" class="h-8 w-auto mx-auto mb-4">
+            <img src="ncr-logo.png" alt="NCR Logo" class="h-8 w-auto mx-auto mb-4">
             <div>Noodle’s Canine Rescue IOM • Charity No. 1387</div>
+            <div class="text-xs mt-2">K. Quayle • A. O’Reilly • G. Bell • <a href="mailto:noodlescaninerescue@gmail.com" class="hover:text-white">noodlescaninerescue@gmail.com</a></div>
         </div>
     </footer>
 </body>
