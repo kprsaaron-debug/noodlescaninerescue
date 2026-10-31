@@ -7,12 +7,12 @@ About Us
 Isle of Man’s dedicated canine search and rescue charity • Charity No. 1387
 Our Story
 Noodle’s Canine Rescue began in June 2025 when a group of passionate volunteers came together after a dog named Elvis had been missing for five weeks. Recognising the need for a more coordinated, technology-enabled response to missing dog incidents on the Island, the team formed with a clear mission: to bring lost dogs home faster using thermal drones, thermal handheld cameras, systematic ground searches, 4g wildlife cameras and trained scent dogs.
-Named after Noodle — our own young collie who is currently in scent discrimination training — the organisation has grown rapidly from a grassroots volunteer effort into an officially registered Isle of Man charity (No. 1387) on 4 June 2026. In our first year we handled 55 missing dog reports, 25 of which were active dog searches and the remainder being found on advice alone. This has allowed us to achieve a 100% recovery rate so far.
+Named after Noodle — our own young collie who is currently in scent discrimination training — the organisation has grown rapidly from a grassroots volunteer effort into an officially registered Isle of Man charity (No. 1387) on 4 June 2026. We have handled 82 missing dog reports, 37 of which were active searches and 45 of which were resolved on advice alone. This has allowed us to achieve a 100% recovery rate so far.
 
 Our Aim & Purpose
 Our purpose is simple but vital: to reduce the time dogs spend missing, minimise distress to animals and families, and return every dog safely home. We exist to provide a professional, compassionate and rapid response service that complements the Island’s emergency services and supports the community when a beloved dog goes missing.
 Key Achievements
-* 100% recovery rate — All 25 missing dogs reported to us since formation have been successfully located and reunited with their families.
+* 100% recovery rate — All 82 missing dog reports handled since formation have been successfully resolved, and every dog has been located and reunited with their family. 37 were active searches and 45 were resolved on advice alone.
 * Drone-powered success — 4 dogs located directly using thermal imaging technology in challenging terrain and nighttime conditions. Drone deployed 14 times on active searches. The weather appears to be our biggest set back for drone deployment, so in the future we look to fund a weatherproof drone to allow for more deployments. The drone has also been invaluable with clearing large areas very quickly with its skilled pilots and observers, allowing us to narrow land based searches down and speeding up recovery efforts.
 * Official Charity Registration — Registered as Charity No. 1387 on 4 June 2026.
 * Community & multi-agency collaboration — Worked alongside police, coastguard, fire services, landowners and hundreds of public volunteers on major operations (including the high-profile recovery of “Toffee” in January 2026 after a 50+ hour search).
@@ -79,7 +79,7 @@ Certification
 Level 2 Award (valid 3 years)
 Cost
 Pricing
-£40 per person
+£30 per person
 Enquire / Book Level 2
 
 
@@ -155,7 +155,7 @@ Learn the techniques for a wide range of emergencies your pets may get into with
 Duration
 This is a blended course, you will purchase part 1 online for £34.95 + vat and complete it at home. It should take around 8 hours and consists of video tutorials as well as online exams.
 
-The second part is in the classroom and cost £120 per person. It should take around 8 hours including breaks, and consists of a PowerPoint presentation with demonstrations and practical hands on first aid.
+The second part is in the classroom and cost £100 per person. It should take around 8 hours including breaks, and consists of a PowerPoint presentation with demonstrations and practical hands on first aid.
 Total 2 Days (16 hours)
 Format
 Theory + Extended Practical
@@ -163,7 +163,7 @@ Certification
 Level 3 Award (valid 3 years)
 Cost
 Part 1 online - £34.95 + vat
-Part 2 classroom - £120 per person (£100 for volunteers of Noodle’s Canine Rescue)
+Part 2 classroom - £100 per person (£80 for volunteers of Noodle’s Canine Rescue, who still pay for Part 1 online separately)
 Enquire / Book Level 3
 
 
@@ -174,7 +174,7 @@ Pet First Aid for Pet Professionals Level 3 (VTQ)™️ - Classroom Blended Part
 Duration
 This is a blended course, you will purchase part 1 online for £34.95 + vat and complete it at home. It should take around 8 hours and consists of video tutorials as well as online exams.
 
-The second part is in the classroom and cost £120 per person. It should take around 8 hours including breaks, and consists of a PowerPoint presentation with demonstrations and practical hands on first aid.
+The second part is in the classroom and cost £100 per person. It should take around 8 hours including breaks, and consists of a PowerPoint presentation with demonstrations and practical hands on first aid.
 Total 2 Days (16 hours)
 Format
 Theory + Extended Practical
@@ -182,7 +182,7 @@ Certification
 Level 3 Award (valid 3 years)
 Cost
 Part 1 online - £34.95 + vat
-Part 2 classroom - £120 per person (£100 for volunteers of Noodle’s Canine Rescue)
+Part 2 classroom - £100 per person (£80 for volunteers of Noodle’s Canine Rescue, who still pay for Part 1 online separately)
 Enquire / Book Level 3
 
 Advanced Pet First Aid Level 3 (VTQ)™️ - Classroom Blended Part 2
@@ -193,7 +193,7 @@ Learn the techniques for a wide range of emergencies your pets may get into with
 Duration
 This is a blended course, you will purchase part 1 online for £34.95 + vat and complete it at home. It should take around 8 hours and consists of video tutorials as well as online exams.
 
-The second part is in the classroom and cost £120 per person. It should take around 8 hours including breaks, and consists of a PowerPoint presentation with demonstrations and practical hands on first aid.
+The second part is in the classroom and cost £100 per person. It should take around 8 hours including breaks, and consists of a PowerPoint presentation with demonstrations and practical hands on first aid.
 Total 2 Days (16 hours)
 Format
 Theory + Extended Practical
@@ -201,7 +201,7 @@ Certification
 Level 3 Award (valid 3 years)
 Cost
 Part 1 online - £34.95 + vat
-Part 2 classroom - £120 per person (£100 for volunteers of Noodle’s Canine Rescue)
+Part 2 classroom - £100 per person (£80 for volunteers of Noodle’s Canine Rescue, who still pay for Part 1 online separately)
 Enquire / Book Level 3
 
 
@@ -230,7 +230,7 @@ Read the BBC coverage →
 2025–2026 Season
 STATISTICS
 Strong Track Record of Success
-55
+82
 Missing Dog Reports Handled
 100%
 Recovery Rate
@@ -238,8 +238,10 @@ Recovery Rate
 Dogs Located by Thermal Drone
 14
 Searches the drone has been deployed on
-25
+37
 Active Searches in June 25/June 26
+45
+Advice-only Cases
 
 
 These results demonstrate the effectiveness of combining professional thermal drone operations with trained ground teams and training scent dogs on the Isle of Man.
