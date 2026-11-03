@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://kprsaaron-debug.github.io/noodlescaninerescue/sitemap.xml
