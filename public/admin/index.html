@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Site editor · Noodle’s Canine Rescue</title>
+  <link rel="icon" href="/ncr-logo.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,650&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/admin/admin.css">
+</head>
+<body>
+
+  <!-- Loading -->
+  <section id="screen-loading" class="screen screen-loading">
+    <img src="/ncr-logo.png" alt="" class="loading-logo">
+    <p>Opening the site editor…</p>
+  </section>
+
+  <!-- Sign in / account screens -->
+  <section id="screen-auth" class="screen screen-auth" hidden>
+    <div class="auth-side">
+      <img src="/ncr-logo.png" alt="Noodle’s Canine Rescue logo" class="auth-logo">
+      <h1>Site editor</h1>
+      <p>Update pages, news, photos and contact details on noodlescaninerescue.com.</p>
+      <p class="auth-foot">Isle of Man • Charity No. 1387</p>
+    </div>
+    <div class="auth-main">
+      <form id="form-login" class="auth-form" novalidate>
+        <h2>Sign in</h2>
+        <label>Email<input type="email" name="email" autocomplete="email" required></label>
+        <label>Password<input type="password" name="password" autocomplete="current-password" required></label>
+        <button type="submit" class="btn btn-primary btn-wide">Sign in</button>
+        <div class="auth-links">
+          <button type="button" class="linkish" data-auth-view="forgot">Forgot password?</button>
+          <button type="button" class="linkish" data-auth-view="signup">First time? Create your account</button>
+        </div>
+      </form>
+
+      <form id="form-signup" class="auth-form" novalidate hidden>
+        <h2>Create your account</h2>
+        <p class="hint">Only approved email addresses can create an account.</p>
+        <label>Your name<input type="text" name="name" autocomplete="name" required></label>
+        <label>Email<input type="email" name="email" autocomplete="email" required></label>
+        <label>Choose a password<input type="password" name="password" autocomplete="new-password" minlength="8" required></label>
+        <button type="submit" class="btn btn-primary btn-wide">Create account</button>
+        <div class="auth-links"><button type="button" class="linkish" data-auth-view="login">← Back to sign in</button></div>
+      </form>
+
+      <form id="form-forgot" class="auth-form" novalidate hidden>
+        <h2>Reset your password</h2>
+        <p class="hint">We’ll email you a link to choose a new password.</p>
+        <label>Email<input type="email" name="email" autocomplete="email" required></label>
+        <button type="submit" class="btn btn-primary btn-wide">Send reset link</button>
+        <div class="auth-links"><button type="button" class="linkish" data-auth-view="login">← Back to sign in</button></div>
+      </form>
+
+      <form id="form-setpw" class="auth-form" novalidate hidden>
+        <h2 id="setpw-title">Choose a new password</h2>
+        <label>New password<input type="password" name="password" autocomplete="new-password" minlength="8" required></label>
+        <button type="submit" class="btn btn-primary btn-wide">Save password</button>
+      </form>
+
+      <p id="auth-msg" class="msg" role="status" hidden></p>
+    </div>
+  </section>
+
+  <!-- Signed in but not approved -->
+  <section id="screen-denied" class="screen screen-denied" hidden>
+    <div class="denied-card">
+      <img src="/ncr-logo.png" alt="" class="auth-logo">
+      <h1>No editing access yet</h1>
+      <p>You’re signed in as <strong id="denied-email"></strong>, but this account hasn’t been approved to edit the site. Ask the site owner to add your email address to the approved list.</p>
+      <button type="button" class="btn btn-ghost" data-action="sign-out">Sign out</button>
+    </div>
+  </section>
+
+  <!-- Dashboard -->
+  <section id="screen-dash" class="screen screen-dash" hidden>
+    <header class="topbar">
+      <a class="brand" href="/admin/">
+        <img src="/ncr-logo.png" alt="">
+        <span><strong>Noodle’s Canine Rescue</strong><small>Site editor</small></span>
+      </a>
+      <div class="topbar-right">
+        <a href="/" target="_blank" rel="noopener" class="btn btn-ghost btn-sm">View site ↗</a>
+        <span class="who" id="who"></span>
+        <button type="button" class="btn btn-ghost btn-sm" data-action="sign-out">Sign out</button>
+      </div>
+    </header>
+
+    <main class="dash">
+      <div class="dash-head">
+        <p class="eyebrow" id="today"></p>
+        <h1 id="greeting">Hello</h1>
+        <p class="lede">Choose a page to edit. Changes stay private until you press <em>Publish</em>.</p>
+      </div>
+
+      <div id="page-grid" class="page-grid" aria-live="polite">
+        <div class="page-card skeleton"></div><div class="page-card skeleton"></div><div class="page-card skeleton"></div>
+        <div class="page-card skeleton"></div><div class="page-card skeleton"></div><div class="page-card skeleton"></div>
+      </div>
+
+      <section class="how">
+        <h2>How editing works</h2>
+        <ol>
+          <li><strong>Click any text</strong> on the page and type to change it.</li>
+          <li><strong>Click a photo</strong> to swap it for a new one or update its description.</li>
+          <li><strong>Add or remove things</strong> — select a block (like a news card) and use <em>Duplicate</em>, <em>Move</em> or <em>Delete</em>.</li>
+          <li><strong>Save draft</strong> to keep working later, or <strong>Publish</strong> to put it live.</li>
+          <li>Every version is kept in <em>History</em>, so any change can be undone.</li>
+        </ol>
+      </section>
+    </main>
+  </section>
+
+  <!-- Page editor -->
+  <section id="screen-editor" class="screen screen-editor" hidden>
+    <header class="editor-bar">
+      <div class="eb-left">
+        <button type="button" class="btn btn-ghost btn-sm" id="btn-back">← Pages</button>
+        <div class="eb-title">
+          <strong id="ed-title">Page</strong>
+          <span id="ed-status" class="pill">Loading…</span>
+        </div>
+      </div>
+      <div class="eb-mid" role="tablist">
+        <button type="button" class="tab is-on" data-mode="visual" role="tab">Visual</button>
+        <button type="button" class="tab" data-mode="details" role="tab">Page details</button>
+        <button type="button" class="tab" data-mode="html" role="tab">HTML</button>
+      </div>
+      <div class="eb-right">
+        <div class="seg" id="device-toggle" title="Preview size">
+          <button type="button" class="is-on" data-device="desktop" aria-label="Desktop view">Desktop</button>
+          <button type="button" data-device="mobile" aria-label="Mobile view">Mobile</button>
+        </div>
+        <button type="button" class="btn btn-ghost btn-sm" id="btn-undo" disabled title="Undo last block change">Undo</button>
+        <a id="btn-live" class="btn btn-ghost btn-sm" target="_blank" rel="noopener">View live ↗</a>
+        <button type="button" class="btn btn-secondary btn-sm" id="btn-draft">Save draft</button>
+        <button type="button" class="btn btn-primary btn-sm" id="btn-publish">Publish</button>
+      </div>
+    </header>
+
+    <div class="editor-body">
+      <div class="stage">
+        <div id="pane-visual" class="pane pane-visual">
+          <div id="canvas" class="canvas">
+            <iframe id="frame" title="Page being edited"></iframe>
+          </div>
+        </div>
+
+        <div id="pane-details" class="pane pane-details" hidden>
+          <form id="details-form" class="details" novalidate>
+            <h2>Page details</h2>
+            <p class="hint">These appear in Google results and when the page is shared on Facebook.</p>
+            <label>Page title
+              <input type="text" name="title" maxlength="120">
+              <span class="count" data-count-for="title"></span>
+            </label>
+            <label>Short description
+              <textarea name="description" rows="4" maxlength="320"></textarea>
+              <span class="count" data-count-for="description"></span>
+            </label>
+            <div class="serp">
+              <p class="serp-url" id="serp-url"></p>
+              <p class="serp-title" id="serp-title"></p>
+              <p class="serp-desc" id="serp-desc"></p>
+            </div>
+          </form>
+        </div>
+
+        <div id="pane-html" class="pane pane-html" hidden>
+          <div class="html-head">
+            <p><strong>Advanced:</strong> edit the page’s HTML directly. Switch back to <em>Visual</em> to see the result.</p>
+          </div>
+          <textarea id="html-src" spellcheck="false" aria-label="Page HTML"></textarea>
+        </div>
+      </div>
+
+      <aside class="inspector">
+        <div class="insp-tabs">
+          <button type="button" class="is-on" data-insp="edit">Edit</button>
+          <button type="button" data-insp="history">History</button>
+        </div>
+        <div id="insp-edit" class="insp-body"></div>
+        <div id="insp-history" class="insp-body" hidden></div>
+      </aside>
+    </div>
+  </section>
+
+  <!-- Image picker -->
+  <dialog id="media-dialog" class="dialog dialog-wide">
+    <form method="dialog" class="dialog-inner">
+      <header class="dialog-head">
+        <h2>Choose an image</h2>
+        <button value="cancel" class="icon-btn" aria-label="Close">✕</button>
+      </header>
+      <div class="upload-zone" id="upload-zone">
+        <input type="file" id="upload-input" accept="image/*" hidden>
+        <p><strong>Upload a new photo</strong><br><span>Drag it here, or</span></p>
+        <button type="button" class="btn btn-primary btn-sm" id="upload-btn">Choose file…</button>
+        <p class="upload-status" id="upload-status" hidden></p>
+      </div>
+      <h3 class="media-sub">Uploaded photos</h3>
+      <div class="media-grid" id="media-uploaded"></div>
+      <h3 class="media-sub">Site photos</h3>
+      <div class="media-grid" id="media-site"></div>
+    </form>
+  </dialog>
+
+  <!-- Confirm / publish dialog -->
+  <dialog id="confirm-dialog" class="dialog">
+    <form method="dialog" class="dialog-inner">
+      <h2 id="confirm-title">Are you sure?</h2>
+      <p id="confirm-text"></p>
+      <label id="confirm-note-wrap" hidden>What did you change? <span class="opt">(optional)</span>
+        <input type="text" id="confirm-note" maxlength="200" placeholder="e.g. Added Suzie’s reunion story">
+      </label>
+      <div class="dialog-actions">
+        <button value="cancel" class="btn btn-ghost">Cancel</button>
+        <button value="ok" class="btn btn-primary" id="confirm-ok">OK</button>
+      </div>
+    </form>
+  </dialog>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <script type="module" src="/admin/app.js"></script>
+</body>
+</html>

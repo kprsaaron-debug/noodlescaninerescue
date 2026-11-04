@@ -1,0 +1,20 @@
+{
+  "dependencies": {
+    "@netlify/blobs": "^11.1.7",
+    "@netlify/database": "^2.0.1",
+    "@netlify/functions": "^6.0.3",
+    "@netlify/identity": "^2.0.0",
+    "drizzle-orm": "^1.0.0-beta.22"
+  },
+  "devDependencies": {
+    "@netlify/edge-functions": "^4.0.3",
+    "drizzle-kit": "^1.0.0-beta.22",
+    "esbuild": "^0.28.2"
+  },
+  "name": "noodlescaninerescue",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "esbuild admin-src/app.js --bundle --format=esm --minify --target=es2020 --outfile=public/admin/app.js"
+  }
+}
