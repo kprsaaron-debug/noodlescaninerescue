@@ -1,2 +1,9 @@
 .DS_Store
 Thumbs.db
+node_modules
+public/admin/app.js
+
+# Local Netlify folder (keep feature markers)
+.netlify/*
+!.netlify/features
+!.netlify/results.md
