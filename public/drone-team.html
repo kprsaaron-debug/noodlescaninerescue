@@ -1,1 +1,292 @@
-FULL_CONTENT_FROM_FILE
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NCR Drone Operations Team | Dog Search Isle of Man</title>
+    <meta name="description" content="Meet the Noodle's Canine Rescue Drone Operations Team. Thermal imaging drones help find missing dogs across Isle of Man glens, farmland, coastline and plantations. Charity No. 1387.">
+    <link rel="canonical" href="https://noodlescaninerescue.com/drone-team.html">
+    <link rel="icon" href="ncr-logo.png" type="image/png">
+    <meta property="og:title" content="NCR Drone Operations Team | Dog Search Isle of Man">
+    <meta property="og:description" content="Meet the Noodle's Canine Rescue Drone Operations Team. Thermal imaging drones help find missing dogs across Isle of Man glens, farmland, coastline and plantations. Charity No. 1387.">
+    <meta property="og:image" content="https://noodlescaninerescue.com/drone-over-moor.jpg">
+    <meta property="og:url" content="https://noodlescaninerescue.com/drone-team.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Noodle's Canine Rescue IOM">
+    <meta property="og:locale" content="en_GB">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="NCR Drone Operations Team | Dog Search Isle of Man">
+    <meta name="twitter:description" content="Meet the Noodle's Canine Rescue Drone Operations Team. Thermal imaging drones help find missing dogs across the Isle of Man. Charity No. 1387.">
+    <meta name="twitter:image" content="https://noodlescaninerescue.com/drone-over-moor.jpg">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        .nav-link { transition: color 0.2s ease; }
+        .nav-link:hover { color: #C62828; }
+    </style>
+</head>
+<body class="bg-white font-sans text-gray-700">
+
+    <nav class="bg-white border-b border-gray-100 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-5">
+            <div class="flex justify-between items-center h-20">
+                <a href="index.html" class="flex items-center gap-x-3">
+                    <img src="ncr-logo.png" alt="Noodle’s Canine Rescue Logo" class="h-10 w-auto">
+                    <div>
+                        <div class="font-semibold text-lg tracking-tight text-[#4A1C6B]">Noodle’s Canine Rescue</div>
+                        <div class="text-[9px] text-gray-500 -mt-1">ISLE OF MAN • CHARITY NO. 1387</div>
+                    </div>
+                </a>
+
+                <div class="hidden lg:flex items-center gap-x-6 text-sm font-medium">
+                    <a href="index.html" class="nav-link text-gray-700">Home</a>
+                    <a href="about.html" class="nav-link text-gray-700">About Us</a>
+                    <a href="drone-team.html" class="nav-link text-[#4A1C6B] font-semibold">Drone Team</a>
+                    <a href="k9-first-aid.html" class="nav-link text-gray-700">K9 First Aid</a>
+                    <a href="report-missing-dog.html" class="nav-link text-gray-700">Report Missing Dog</a>
+                    <a href="news.html" class="nav-link text-gray-700">News &amp; Updates</a>
+                </div>
+
+                <div class="flex items-center gap-x-3">
+                    <a href="volunteer.html" class="px-5 py-2 text-sm font-semibold rounded-2xl bg-[#C62828] text-white hover:bg-[#a81f1f] transition-colors">
+                        Volunteer Today
+                    </a>
+                    <button id="burger-btn" class="lg:hidden w-10 h-10 flex items-center justify-center text-gray-600" aria-label="Open menu">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="hidden lg:hidden bg-white border-t">
+            <div class="px-5 py-4 flex flex-col gap-y-2 text-sm font-medium">
+                <a href="index.html" class="py-2 text-gray-700">Home</a>
+                <a href="about.html" class="py-2 text-gray-700">About Us</a>
+                <a href="drone-team.html" class="py-2 text-[#4A1C6B] font-semibold">Drone Team</a>
+                <a href="k9-first-aid.html" class="py-2 text-gray-700">K9 First Aid</a>
+                <a href="report-missing-dog.html" class="py-2 text-gray-700">Report Missing Dog</a>
+                <a href="news.html" class="py-2 text-gray-700">News &amp; Updates</a>
+                <div class="pt-3 border-t">
+                    <a href="volunteer.html" class="py-2 text-[#C62828] font-semibold">Volunteer Today</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <script>
+        const burgerBtn = document.getElementById('burger-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        burgerBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            const icon = burgerBtn.querySelector('i');
+            icon.classList.toggle('fa-bars');
+            icon.classList.toggle('fa-times');
+        });
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                burgerBtn.querySelector('i').classList.add('fa-bars');
+                burgerBtn.querySelector('i').classList.remove('fa-times');
+            });
+        });
+    </script>
+
+    <div class="bg-[#F8F5F2] py-14">
+        <div class="max-w-4xl mx-auto px-5 text-center">
+            <div class="inline-flex items-center gap-x-2 bg-white text-[#4A1C6B] text-xs font-semibold tracking-[1.5px] px-4 py-1.5 rounded-3xl mb-5 border border-gray-100">
+                <img src="drone-silhouette.png" alt="" class="w-5 h-5 object-contain" aria-hidden="true">
+                NCR DRONE OPERATIONS TEAM
+            </div>
+            <h1 class="text-4xl sm:text-5xl tracking-tighter text-[#4A1C6B] font-semibold mb-4">Eyes in the sky for missing dogs</h1>
+            <p class="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto">Professional thermal imaging drones helping Noodle’s Canine Rescue search Isle of Man glens, plantations, farmland, coastline and upland — day and night — so ground and scent teams can focus where it matters most.</p>
+        </div>
+    </div>
+
+    <div class="max-w-4xl mx-auto px-5 py-14">
+
+        <div class="prose prose-lg max-w-none">
+            <p>When a dog goes missing on the Isle of Man, every hour counts. Dense woodland, steep glens, cliff paths, private farmland and open moorland can hide a frightened animal for days. The NCR Drone Operations Team gives our volunteers a safe, rapid way to cover large areas, spot heat signatures in darkness, and guide ground searchers and scent dog Noodle to the right place — sooner.</p>
+        </div>
+
+        <figure class="mt-10">
+            <img src="drone-over-moor.jpg" alt="The Noodle’s Canine Rescue thermal drone flying low over a Manx moorland gate and heather." class="w-full h-auto rounded-2xl" width="1600" height="900">
+            <figcaption class="mt-3 text-sm text-gray-500">NCR’s thermal search drone over open Manx ground.</figcaption>
+        </figure>
+
+        <section class="mt-14" id="team">
+            <h2 class="text-3xl font-semibold text-[#4A1C6B]">Team overview &amp; leadership</h2>
+            <p class="mt-4 text-gray-600">The Drone Operations Team is a volunteer capability within Noodle’s Canine Rescue IOM (Charity No. 1387). It works hand-in-hand with our Ground Search Team, 4G wildlife camera operators, handheld thermal users and scent dog Noodle — never as a standalone service.</p>
+            <p class="mt-4 text-gray-600">The team is led by experienced volunteer drone pilot <strong>Aaron O’Reilly</strong>, co-founder of Noodle’s Canine Rescue. Pilots and observers train together so that every flight supports a clear search plan, radio coordination and animal welfare.</p>
+
+            <blockquote class="mt-8 p-6 bg-[#F8F5F2] rounded-2xl border-l-4 border-[#4A1C6B] text-gray-600 italic">
+                “Thermal drones help us clear ground quickly and safely, so our volunteers on foot can focus on the places a dog is most likely to be — without putting people or animals at unnecessary risk.”
+                <footer class="mt-3 text-sm not-italic text-gray-500">— Aaron O’Reilly, Drone Operations Lead</footer>
+            </blockquote>
+
+            <figure class="mt-8 max-w-md mx-auto md:mx-0">
+                <img src="drone-pilot-kit.jpg" alt="NCR drone pilot and observer field kit: open hard cases with controller and batteries, DRONE PILOT and DRONE OBSERVER patches, radio and tactical packs." class="w-full h-auto max-h-[32rem] object-cover rounded-2xl shadow-sm" width="1069" height="1600">
+                <figcaption class="mt-3 text-sm text-gray-500">Drone pilot and observer field kit — patches, radios and packed controllers ready for deployment.</figcaption>
+            </figure>
+        </section>
+
+        <section class="mt-14" id="equipment">
+            <h2 class="text-3xl font-semibold text-[#4A1C6B]">Equipment &amp; capabilities</h2>
+            <p class="mt-4 text-gray-600">NCR operates a professional-grade <strong>DJI Matrice 4T</strong> thermal imaging drone. Earlier searches also used a <strong>DJI Mavic 3 Thermal</strong> as the team built experience and proved the value of aerial thermal support on Manx terrain.</p>
+
+            <div class="mt-8 grid md:grid-cols-2 gap-6">
+                <div class="border border-gray-200 rounded-3xl p-6">
+                    <div class="w-12 h-12 bg-[#4A1C6B]/10 rounded-2xl flex items-center justify-center mb-4">
+                        <i class="fa-solid fa-temperature-high text-2xl text-[#4A1C6B]"></i>
+                    </div>
+                    <h3 class="font-semibold text-xl mb-2">Thermal detection</h3>
+                    <p class="text-sm text-gray-600">Detects heat signatures in dense woodland, coastal areas and complete darkness — conditions where a visual-only search can miss a quiet, still dog.</p>
+                </div>
+                <div class="border border-gray-200 rounded-3xl p-6">
+                    <div class="w-12 h-12 bg-[#4A1C6B]/10 rounded-2xl flex items-center justify-center mb-4">
+                        <i class="fa-solid fa-moon text-2xl text-[#4A1C6B]"></i>
+                    </div>
+                    <h3 class="font-semibold text-xl mb-2">Rapid night deployment</h3>
+                    <p class="text-sm text-gray-600">When conditions allow, the team can deploy after dark to cover large areas while ground teams work carefully on foot with handheld thermal and radios.</p>
+                </div>
+                <div class="border border-gray-200 rounded-3xl p-6">
+                    <div class="w-12 h-12 bg-[#4A1C6B]/10 rounded-2xl flex items-center justify-center mb-4">
+                        <i class="fa-solid fa-map-marked-alt text-2xl text-[#4A1C6B]"></i>
+                    </div>
+                    <h3 class="font-semibold text-xl mb-2">Large-area coverage</h3>
+                    <p class="text-sm text-gray-600">Planned search grids help clear plantations, farmland and upland stretches far faster than foot teams alone, so resources concentrate on priority zones.</p>
+                </div>
+                <div class="border border-gray-200 rounded-3xl p-6">
+                    <div class="w-12 h-12 bg-[#4A1C6B]/10 rounded-2xl flex items-center justify-center mb-4">
+                        <i class="fa-solid fa-walkie-talkie text-2xl text-[#4A1C6B]"></i>
+                    </div>
+                    <h3 class="font-semibold text-xl mb-2">Real-time coordination</h3>
+                    <p class="text-sm text-gray-600">Radio links keep the drone crew aligned with ground searchers, camera volunteers and scent dog Noodle — turning an aerial sighting into a calm, coordinated recovery.</p>
+                </div>
+            </div>
+
+            <div class="mt-8 grid md:grid-cols-2 gap-8 items-start">
+                <figure>
+                    <img src="thermal-daylight.jpg" alt="Side-by-side thermal and daylight drone views of a dog in grass." class="w-full h-auto rounded-2xl" width="1600" height="654">
+                    <figcaption class="mt-3 text-sm text-gray-500">Thermal and daylight views from the drone.</figcaption>
+                </figure>
+                <figure>
+                    <img src="controller-field-kit.jpg" alt="Open orange hard case packed with a DJI RC Plus controller, Panasonic Toughpad tablet, cables and USB hub for field operations." class="w-full h-auto rounded-2xl shadow-sm" width="1600" height="1200">
+                    <figcaption class="mt-3 text-sm text-gray-500">RC Plus controller and Toughpad packed in the team’s foam-lined flight case for rapid deployment.</figcaption>
+                </figure>
+            </div>
+
+            <figure class="mt-8 max-w-lg mx-auto md:mx-0">
+                <img src="thermal-dog-spotted.jpg" alt="Rain-spattered DJI controller screen showing a thermal heat signature beside a zoomed visual view of a dark dog in scrub, with flight telemetry." class="w-full h-auto max-h-[36rem] object-cover object-top rounded-2xl shadow-sm" width="1200" height="1600">
+                <figcaption class="mt-3 text-sm text-gray-500">A missing dog spotted on the controller’s thermal and zoom cameras during a low-visibility flight (about 111 ft AGL). Hands and footwear of the operator only — no members of the public shown.</figcaption>
+            </figure>
+
+            <p class="mt-8 text-sm text-gray-500">Weather limits what we can fly. Rain and strong wind can ground the current aircraft — which is why weather remains our biggest operational challenge (see Future plans below).</p>
+        </section>
+
+        <section class="mt-14" id="impact">
+            <h2 class="text-3xl font-semibold text-[#4A1C6B]">Operational impact</h2>
+            <p class="mt-4 text-gray-600">Thermal drones do not replace people on the ground. They help clear ground quickly, reduce risk in difficult terrain, and give families a faster path to answers — alongside flyers, 4G cameras, handheld thermal and scent work.</p>
+
+            <div class="mt-8 grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div class="bg-[#F8F5F2] rounded-3xl p-6 text-center">
+                    <div class="text-3xl font-semibold text-[#4A1C6B]">14+</div>
+                    <div class="text-xs text-gray-600 mt-1">Active searches with drone deployed</div>
+                </div>
+                <div class="bg-[#F8F5F2] rounded-3xl p-6 text-center">
+                    <div class="text-3xl font-semibold text-[#4A1C6B]">4</div>
+                    <div class="text-xs text-gray-600 mt-1">Dogs located directly by thermal imaging</div>
+                </div>
+                <div class="bg-[#F8F5F2] rounded-3xl p-6 text-center">
+                    <div class="text-3xl font-semibold text-[#4A1C6B]">50+</div>
+                    <div class="text-xs text-gray-600 mt-1">Hours in the Toffee search</div>
+                </div>
+                <div class="bg-[#F8F5F2] rounded-3xl p-6 text-center">
+                    <div class="text-3xl font-semibold text-[#4A1C6B]">Day &amp; night</div>
+                    <div class="text-xs text-gray-600 mt-1">Ready when conditions allow</div>
+                </div>
+            </div>
+
+            <h3 class="text-2xl font-semibold mt-10 text-[#4A1C6B]">Recoveries where the drone made a difference</h3>
+            <ul class="mt-4 space-y-3 text-gray-600">
+                <li><strong>Toffee</strong> — A complex search lasting more than 50 hours across challenging Foxdale and St Marks Country Park terrain. Thermal drones played a key role in locating the dog so ground teams and owners could complete a safe recovery.</li>
+                <li><strong>Elvis</strong> — An early milestone for the organisation. Thermal imaging helped the emerging volunteer team refine search areas during a prolonged missing-dog operation (five weeks) that helped inspire Noodle’s Canine Rescue.</li>
+                <li>Other searches — The drone regularly clears large areas quickly so ground searches can focus, even when the final find comes from a sighting, camera or scent work.</li>
+            </ul>
+
+            <figure class="mt-8 max-w-lg">
+                <img src="toffee-reunion.jpg" alt="Toffee reunited with their owners after a multi-day search." class="w-full h-auto rounded-2xl">
+                <figcaption class="mt-3 text-sm text-gray-500">Toffee’s reunion — a reminder of why coordinated search matters.</figcaption>
+            </figure>
+
+            <div class="mt-8 p-6 bg-[#F8F5F2] rounded-2xl border border-gray-200 text-sm text-gray-600">
+                <p class="font-medium text-[#4A1C6B]">From NCR’s case log (28 May 2025 – 1 Nov 2026)</p>
+                <p class="mt-2">Across 38 logged cases, 37 dogs were recovered. The drone was deployed on 22 of those cases; 4 of NCR’s 12 finds attributed in that log were by drone. Farmland and private land were the most common terrain (47%). Elvis remains among the longest recoveries (five weeks). Toffee’s search involved 9 volunteers.</p>
+                <p class="mt-2 text-gray-500">Headline figures on this page use Aaron’s operational summary (14+ drone deployments; 4 dogs located by thermal). Case-log totals may differ by date range and how “find” is attributed — they are included for context only.</p>
+            </div>
+        </section>
+
+        <section class="mt-14" id="training">
+            <h2 class="text-3xl font-semibold text-[#4A1C6B]">Training &amp; standards</h2>
+            <p class="mt-4 text-gray-600">Safe flying over Manx countryside means more than owning a capable aircraft. Our pilots and observers train for the Island’s mix of glens, plantations, farmland, coastline, cliffs and upland — and for the welfare of the dog at the centre of every call-out.</p>
+            <ul class="mt-6 space-y-3 text-gray-600">
+                <li><strong>Aviation standards</strong> — Pilots are trained to CAA-equivalent standards for the operations we undertake. Some team members are certified for night flying and restricted airspace. We do not claim that every pilot holds the same formal CAA licence; training and tasking match each person’s qualifications.</li>
+                <li><strong>Thermal image interpretation for canines</strong> — Distinguishing a dog’s heat signature from livestock, wildlife and warm ground clutter.</li>
+                <li><strong>Search grid planning</strong> — Systematic coverage that feeds clear tasking to ground and scent teams.</li>
+                <li><strong>Safe Manx operations</strong> — Weather assessment, landowner liaison, radio discipline and incident command alongside the wider NCR response.</li>
+            </ul>
+            <p class="mt-4 text-gray-600">Observers and logistics volunteers are equally important: spotting, note-taking, battery management and keeping the search calm for a stressed animal.</p>
+
+            <div class="mt-8 grid md:grid-cols-2 gap-8 items-start">
+                <figure>
+                    <img src="volunteer-briefing.jpg" alt="Aerial view of Noodle’s Canine Rescue volunteers gathered beside the team van." class="w-full h-auto rounded-2xl" width="1600" height="1200">
+                    <figcaption class="mt-3 text-sm text-gray-500">Volunteers brief beside the team van before an operation.</figcaption>
+                </figure>
+                <figure>
+                    <img src="field-drone-wet.jpg" alt="DJI Mavic 3 Enterprise drone and controller covered in raindrops on a plywood surface after a wet-weather sortie." class="w-full h-auto rounded-2xl shadow-sm" width="1600" height="900">
+                    <figcaption class="mt-3 text-sm text-gray-500">Training for Manx weather: a Mavic 3 Enterprise and controller after a damp sortie (not the Matrice 4T).</figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <section class="mt-14" id="future">
+            <h2 class="text-3xl font-semibold text-[#4A1C6B]">Future plans &amp; support needs</h2>
+            <p class="mt-4 text-gray-600">Weather is our biggest setback. The current drone is limited in rain and strong wind — as families saw during Storm Boelo, when Suzie’s Ramsey search relied on flyers, thermal binoculars and 4G cameras because the aircraft could not fly.</p>
+            <p class="mt-4 text-gray-600">We are fundraising for a weatherproof <strong>DJI Matrice 4TD</strong> — an advanced rain- and wind-capable platform that other NCR materials place at around <strong>£10,000</strong> — so more searches can launch when Manx weather would otherwise keep us on the ground.</p>
+            <p class="mt-4 text-gray-600">Ongoing support also helps cover insurance, maintenance, spare batteries, pilot training renewals and the kit that sits alongside the drone: 4G wildlife cameras, handheld thermal and communications.</p>
+
+            <figure class="mt-8 max-w-2xl">
+                <img src="mavic-field-ready.jpg" alt="DJI Mavic 3 Enterprise drone resting on a red NCR DRONE TEAM hard case on a vehicle passenger seat, countryside visible through the window." class="w-full h-auto rounded-2xl shadow-sm" width="1600" height="1200">
+                <figcaption class="mt-3 text-sm text-gray-500">Current field kit includes a Mavic 3 Enterprise on the team’s hard case — capable, but still limited in rain and strong wind. Fundraising for a weatherproof Matrice 4TD (~£10k) would keep more searches flying when Manx weather turns.</figcaption>
+            </figure>
+        </section>
+
+        <section class="mt-14" id="get-involved">
+            <div class="bg-[#4A1C6B] text-white rounded-3xl p-8 md:p-10">
+                <div class="text-[#C62828] text-sm font-semibold tracking-widest mb-2">GET INVOLVED</div>
+                <h2 class="text-3xl font-semibold tracking-tight mb-4">Help the Drone Operations Team bring dogs home</h2>
+                <p class="text-white/85 max-w-2xl">Whether you can fly, observe, fund kit or share an appeal, you strengthen Isle of Man search and rescue for missing dogs. Volunteers will be trained. Owners who need us can report a missing dog at any time.</p>
+                <div class="mt-8 flex flex-col sm:flex-row flex-wrap gap-4">
+                    <a href="volunteer.html" class="inline-flex items-center justify-center px-6 py-3 bg-[#C62828] hover:bg-[#a81f1f] text-white font-semibold rounded-2xl transition-colors">Volunteer Today</a>
+                    <a href="https://www.gofundme.com/f/thermal-drone-for-isle-of-man-pet-rescue" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center px-6 py-3 bg-white text-[#4A1C6B] font-semibold rounded-2xl">Support Our Work</a>
+                    <a href="report-missing-dog.html" class="inline-flex items-center justify-center px-6 py-3 border border-white/60 hover:bg-white/10 text-white font-semibold rounded-2xl transition-colors">Report a Missing Dog</a>
+                </div>
+                <p class="mt-6 text-sm text-white/70">Email <a href="mailto:noodlescaninerescue@gmail.com" class="underline hover:text-white">noodlescaninerescue@gmail.com</a> · Call <a href="tel:+447624464682" class="underline hover:text-white">07624 464682</a> · <a href="https://www.facebook.com/profile.php?id=61577324553552" target="_blank" rel="noopener noreferrer" class="underline hover:text-white">Facebook</a></p>
+            </div>
+        </section>
+
+        <div class="mt-10 p-6 bg-[#F8F5F2] rounded-2xl border border-gray-200">
+            <p class="font-medium text-[#4A1C6B]">Learn more about the wider charity</p>
+            <p class="text-sm mt-1">Read our <a href="about.html" class="text-[#C62828] font-semibold">About Us</a> story, browse <a href="news.html" class="text-[#C62828] font-semibold">News &amp; Updates</a>, or explore <a href="k9-first-aid.html" class="text-[#C62828] font-semibold">K9 First Aid</a> training on the Island.</p>
+        </div>
+
+    </div>
+
+    <footer class="bg-[#1A1A2E] text-white/70 py-10 text-sm">
+        <div class="max-w-6xl mx-auto px-5 text-center">
+            <img src="ncr-logo.png" alt="NCR Logo" class="h-8 w-auto mx-auto mb-4">
+            <div>Noodle’s Canine Rescue IOM • Charity No. 1387</div>
+            <div class="text-xs mt-2">K. Quayle • G. Bell • <a href="tel:+447624464682" class="hover:text-white">07624 464682</a> • <a href="mailto:noodlescaninerescue@gmail.com" class="hover:text-white">noodlescaninerescue@gmail.com</a></div>
+        </div>
+    </footer>
+</body>
+</html>
