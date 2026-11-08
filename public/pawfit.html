@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pawfit Affiliate | Noodle’s Canine Rescue IOM</title>
+    <meta name="description" content="Noodle’s Canine Rescue is a Pawfit affiliate. Use code NOODL3 for a discount on GPS pet trackers. Charity No. 1387, Isle of Man.">
+    <link rel="canonical" href="https://noodlescaninerescue.com/pawfit.html">
+    <link rel="icon" href="ncr-logo.png" type="image/png">
+    <meta property="og:title" content="Pawfit Affiliate | Noodle’s Canine Rescue IOM">
+    <meta property="og:description" content="Use Noodle’s Canine Rescue affiliate code NOODL3 for a discount on Pawfit GPS pet trackers.">
+    <meta property="og:url" content="https://noodlescaninerescue.com/pawfit.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Noodle's Canine Rescue IOM">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        .nav-link { transition: color 0.2s ease; }
+        .nav-link:hover { color: #C62828; }
+    </style>
+</head>
+<body class="bg-white font-sans text-gray-700">
+
+    <nav class="bg-white border-b border-gray-100 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-5">
+            <div class="flex justify-between items-center h-20">
+                <a href="index.html" class="flex items-center gap-x-3">
+                    <img src="ncr-logo.png" alt="Noodle’s Canine Rescue Logo" class="h-10 w-auto">
+                    <div>
+                        <div class="font-semibold text-lg tracking-tight text-[#4A1C6B]">Noodle’s Canine Rescue</div>
+                        <div class="text-[9px] text-gray-500 -mt-1">ISLE OF MAN • CHARITY NO. 1387</div>
+                    </div>
+                </a>
+                <div class="hidden md:flex items-center gap-x-7 text-sm font-medium">
+                    <a href="index.html" class="nav-link text-gray-700">Home</a>
+                    <a href="about.html" class="nav-link text-[#4A1C6B] font-semibold">About Us</a>
+                    <a href="k9-first-aid.html" class="nav-link text-gray-700">K9 First Aid</a>
+                    <a href="report-missing-dog.html" class="nav-link text-gray-700">Report Missing Dog</a>
+                    <a href="news.html" class="nav-link text-gray-700">News &amp; Updates</a>
+                </div>
+                <div class="flex items-center gap-x-3">
+                    <a href="volunteer.html" class="px-5 py-2 text-sm font-semibold rounded-2xl bg-[#C62828] text-white hover:bg-[#a81f1f] transition-colors">Volunteer Today</a>
+                    <button id="burger-btn" class="md:hidden w-10 h-10 flex items-center justify-center text-gray-600">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+            <div class="px-5 py-4 flex flex-col gap-y-2 text-sm font-medium">
+                <a href="index.html" class="py-2 text-gray-700">Home</a>
+                <a href="about.html" class="py-2 text-[#4A1C6B] font-semibold">About Us</a>
+                <a href="k9-first-aid.html" class="py-2 text-gray-700">K9 First Aid</a>
+                <a href="report-missing-dog.html" class="py-2 text-gray-700">Report Missing Dog</a>
+                <a href="news.html" class="py-2 text-gray-700">News &amp; Updates</a>
+                <div class="pt-3 border-t">
+                    <a href="volunteer.html" class="py-2 text-[#C62828] font-semibold">Volunteer Today</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <script>
+        const burgerBtn = document.getElementById('burger-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        burgerBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            const icon = burgerBtn.querySelector('i');
+            icon.classList.toggle('fa-bars');
+            icon.classList.toggle('fa-times');
+        });
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                burgerBtn.querySelector('i').classList.add('fa-bars');
+                burgerBtn.querySelector('i').classList.remove('fa-times');
+            });
+        });
+    </script>
+
+    <div class="bg-[#F8F5F2] py-14">
+        <div class="max-w-4xl mx-auto px-5 text-center">
+            <div class="inline-flex items-center gap-x-2 bg-white text-[#4A1C6B] text-xs font-semibold tracking-[1.5px] px-4 py-1.5 rounded-3xl mb-5 border border-gray-100">
+                PAWFIT AFFILIATE
+            </div>
+            <h1 class="text-4xl sm:text-5xl tracking-tighter text-[#4A1C6B] font-semibold mb-4">Help prevent missing dogs with GPS tracking</h1>
+            <p class="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto">Noodle’s Canine Rescue is a Pawfit affiliate. Use our code for a discount on GPS pet trackers — and support our search and rescue work at the same time.</p>
+        </div>
+    </div>
+
+    <div class="max-w-4xl mx-auto px-5 py-14">
+
+        <div class="bg-gradient-to-r from-orange-500 to-orange-400 text-white rounded-3xl p-8 md:p-10 text-center mb-10">
+            <div class="text-sm font-semibold tracking-widest opacity-90 mb-2">YOUR DISCOUNT CODE</div>
+            <div class="text-5xl md:text-6xl font-bold tracking-tight mb-2">NOODL3</div>
+            <div class="text-sm opacity-90">Valid until 20 May 2031</div>
+            <p class="mt-4 text-white/90 max-w-md mx-auto">Enter this code at checkout on pawfit.com for a discount on a Pawfit GPS tracker.</p>
+            <a href="https://www.pawfit.com" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center mt-6 px-8 py-3 bg-white text-orange-600 font-semibold rounded-2xl hover:bg-gray-100 transition-colors">
+                Shop Pawfit Trackers
+            </a>
+        </div>
+
+        <div class="prose prose-lg max-w-none">
+            <h2 class="text-3xl font-semibold text-[#4A1C6B]">Why we partner with Pawfit</h2>
+            <p>As a canine search and rescue charity, we see first-hand how quickly a dog can go missing — and how much harder it is to find them without any form of real-time location data. GPS trackers are one of the most effective preventative tools available to owners.</p>
+            <p>Pawfit makes waterproof GPS trackers for dogs and cats that work over the mobile network (no range limit like Bluetooth tags). Features include live tracking, activity monitoring, safety zones with escape alerts, and a speaker for voice recall.</p>
+
+            <h2 class="text-3xl font-semibold text-[#4A1C6B] mt-10">How the affiliate programme works</h2>
+            <ul class="space-y-2">
+                <li>You get a discount (typically up to 10%) when you use code <strong>NOODL3</strong> at checkout.</li>
+                <li>Noodle’s Canine Rescue earns a small commission on each sale (paid quarterly).</li>
+                <li>That commission helps fund drone batteries, 4G cameras, training and other operational costs.</li>
+            </ul>
+            <p>There is no extra cost to you beyond the normal price of the tracker (minus the discount).</p>
+
+            <h2 class="text-3xl font-semibold text-[#4A1C6B] mt-10">Popular options</h2>
+            <div class="grid md:grid-cols-2 gap-6 not-prose mt-6">
+                <div class="border border-gray-200 rounded-3xl p-6">
+                    <h3 class="font-semibold text-xl text-[#4A1C6B] mb-2">Pawfit 3</h3>
+                    <p class="text-sm text-gray-600 mb-4">Fully waterproof GPS tracker with live tracking, activity monitoring, safety zones and voice recall. Suitable for most dogs.</p>
+                    <a href="https://www.pawfit.com/product/pawfit-3.html" target="_blank" rel="noopener noreferrer" class="text-[#C62828] font-semibold text-sm">View Pawfit 3 →</a>
+                </div>
+                <div class="border border-gray-200 rounded-3xl p-6">
+                    <h3 class="font-semibold text-xl text-[#4A1C6B] mb-2">Pawfit Lite</h3>
+                    <p class="text-sm text-gray-600 mb-4">The smallest and lightest Pawfit GPS tracker. Ideal for smaller dogs and cats. Waterproof and long battery life.</p>
+                    <a href="https://www.pawfit.com/product/pawfit-lite-gps-tracker-for-dogs.html" target="_blank" rel="noopener noreferrer" class="text-[#C62828] font-semibold text-sm">View Pawfit Lite →</a>
+                </div>
+            </div>
+
+            <div class="mt-10 p-6 bg-[#F8F5F2] rounded-2xl border border-gray-200">
+                <p class="font-medium text-[#4A1C6B]">Questions about the code or trackers?</p>
+                <p class="text-sm mt-1">Email <a href="mailto:noodlescaninerescue@gmail.com" class="text-[#C62828] font-semibold">noodlescaninerescue@gmail.com</a> or visit <a href="https://www.pawfit.com" target="_blank" rel="noopener noreferrer" class="text-[#C62828] font-semibold">pawfit.com</a>.</p>
+            </div>
+
+            <div class="mt-8 text-center">
+                <a href="about.html" class="text-[#4A1C6B] font-semibold hover:underline">← Back to About Us</a>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-[#1A1A2E] text-white/70 py-10 text-sm">
+        <div class="max-w-6xl mx-auto px-5 text-center">
+            <img src="ncr-logo.png" alt="NCR Logo" class="h-8 w-auto mx-auto mb-4">
+            <div>Noodle’s Canine Rescue IOM • Charity No. 1387</div>
+            <div class="text-xs mt-2">K. Quayle • G. Bell • <a href="tel:+447624464682" class="hover:text-white">07624 464682</a> • <a href="mailto:noodlescaninerescue@gmail.com" class="hover:text-white">noodlescaninerescue@gmail.com</a></div>
+        </div>
+    </footer>
+</body>
+</html>
