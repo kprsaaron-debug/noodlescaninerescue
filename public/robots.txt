@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /admin/
 
-Sitemap: https://kprsaaron-debug.github.io/noodlescaninerescue/sitemap.xml
+Sitemap: https://noodlescaninerescue.com/sitemap.xml
