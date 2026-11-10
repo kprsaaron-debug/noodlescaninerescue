@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en-GB"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Dog Search &amp; Rescue Isle of Man</title>
+    <meta name="description" content="Meet Noodle's Canine Rescue IOM — Isle of Man Charity No. 1387. Learn how our drone, ground search and scent dog teams find missing dogs across the Island.">
+    <link rel="canonical" href="https://kprsaaron-debug.github.io/noodlescaninerescue/about.html">
+    <link rel="icon" href="ncr-logo.png" type="image/png">
+    <meta property="og:title" content="About Us | Dog Search &amp; Rescue Isle of Man">
+    <meta property="og:description" content="Meet Noodle's Canine Rescue IOM — Isle of Man Charity No. 1387. Learn how our drone, ground search and scent dog teams find missing dogs across the Island.">
+    <meta property="og:image" content="https://kprsaaron-debug.github.io/noodlescaninerescue/hero-bg.png">
+    <meta property="og:url" content="https://kprsaaron-debug.github.io/noodlescaninerescue/about.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Noodle's Canine Rescue IOM">
+    <meta property="og:locale" content="en_GB">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="About Us | Dog Search &amp; Rescue Isle of Man">
+    <meta name="twitter:description" content="Meet Noodle's Canine Rescue IOM — Isle of Man Charity No. 1387. Learn how our drone, ground search and scent dog teams find missing dogs across the Island.">
+    <meta name="twitter:image" content="https://kprsaaron-debug.github.io/noodlescaninerescue/hero-bg.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        .nav-link { transition: color 0.2s ease; }
+        .nav-link:hover { color: #C62828; }
+    </style>
+</head>
+<body class="bg-white font-sans text-gray-700">
+
+    <nav class="bg-white border-b border-gray-100 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-5">
+            <div class="flex justify-between items-center h-20">
+                <a class="flex items-center gap-x-3" href="/">
+                    <img src="ncr-logo.png" alt="Noodle’s Canine Rescue Logo" class="h-10 w-auto">
+                    <div>
+                        <div class="font-semibold text-lg tracking-tight text-[#4A1C6B]">Noodle’s Canine Rescue</div>
+                        <div class="text-[9px] text-gray-500 -mt-1">ISLE OF MAN • CHARITY NO. 1387</div>
+                    </div>
+                </a>
+
+                <div class="hidden md:flex items-center gap-x-7 text-sm font-medium">
+                    <a class="nav-link text-gray-700" href="/">Home</a>
+                    <a class="nav-link text-[#4A1C6B] font-semibold" href="/about">About Us</a>
+                    <a class="nav-link text-gray-700" href="/k9-first-aid">K9 First Aid</a>
+                    <a class="nav-link text-gray-700" href="/report-missing-dog">Report Missing Dog</a>
+                    <a class="nav-link text-gray-700" href="/news">News &amp; Updates</a>
+                </div>
+
+                <div class="flex items-center gap-x-3">
+                    <a class="px-5 py-2 text-sm font-semibold rounded-2xl bg-[#C62828] text-white hover:bg-[#a81f1f] transition-colors" href="/volunteer">
+                        Volunteer Today
+                    </a>
+                    <button id="burger-btn" class="md:hidden w-10 h-10 flex items-center justify-center text-gray-600">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+            <div class="px-5 py-4 flex flex-col gap-y-2 text-sm font-medium">
+                <a class="py-2 text-gray-700" href="/">Home</a>
+                <a class="py-2 text-[#4A1C6B] font-semibold" href="/about">About Us</a>
+                <a class="py-2 text-gray-700" href="/k9-first-aid">K9 First Aid</a>
+                <a class="py-2 text-gray-700" href="/report-missing-dog">Report Missing Dog</a>
+                <a class="py-2 text-gray-700" href="/news">News &amp; Updates</a>
+                <div class="pt-3 border-t">
+                    <a class="py-2 text-[#C62828] font-semibold" href="/volunteer">Volunteer Today</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <script>
+        const burgerBtn = document.getElementById('burger-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        burgerBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            const icon = burgerBtn.querySelector('i');
+            icon.classList.toggle('fa-bars');
+            icon.classList.toggle('fa-times');
+        });
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                burgerBtn.querySelector('i').classList.add('fa-bars');
+                burgerBtn.querySelector('i').classList.remove('fa-times');
+            });
+        });
+    </script>
+
+    <div class="bg-[#F8F5F2] py-14">
+        <div class="max-w-4xl mx-auto px-5 text-center">
+            <h1 class="text-5xl tracking-tighter text-[#4A1C6B] font-semibold mb-4">About Us</h1>
+            <p class="text-lg text-gray-600">Isle of Man’s dedicated canine search and rescue charity • Charity No. 1387</p>
+        </div>
+    </div>
+
+    <div class="max-w-4xl mx-auto px-5 py-14">
+        <div class="prose prose-lg max-w-none">
+
+            <h2 class="text-3xl font-semibold text-[#4A1C6B]">Our Story</h2>
+            <p>Noodle’s Canine Rescue began in June 2025 when a group of passionate volunteers came together after a dog named Elvis had been missing for five weeks. Recognising the need for a more coordinated, technology-enabled response to missing dog incidents on the Island, the team formed with a clear mission: to bring lost dogs home faster using thermal drones, thermal handheld cameras, systematic ground searches, 4g wildlife cameras and trained scent dogs.</p>
+            <p>Named after <strong>Noodle</strong> — our own young collie who is currently in scent discrimination training — the organisation has grown rapidly from a grassroots volunteer effort into an officially registered Isle of Man charity (No. 1387) on 4 June 2026. We have handled 82 missing dog reports, 37 of which were active searches and 45 of which were advice only.</p>
+            <figure class="mt-8 max-w-sm">
+                <img src="noodle.jpg" alt="Noodle, the black and white collie the charity is named after, sitting on grass." class="w-full h-auto rounded-2xl" width="1200" height="1600">
+                <figcaption class="mt-3 text-sm text-gray-500">Noodle, the collie the charity is named after.</figcaption>
+            </figure>
+
+            <h2 class="text-3xl font-semibold text-[#4A1C6B] mt-10">Our Aim &amp; Purpose</h2>
+            <p>Our purpose is simple but vital: <strong>to reduce the time dogs spend missing, minimise distress to animals and families, and return every dog safely home</strong>. We exist to provide a professional, compassionate and rapid response when a beloved dog goes missing.</p>
+
+            <h2 class="text-3xl font-semibold text-[#4A1C6B] mt-10">Key Achievements</h2>
+            <ul class="space-y-3">
+                <li><strong>Drone capability</strong> — The drone has been deployed on 14 active searches. The weather appears to be our biggest set back for drone deployment, so in the future we look to fund a weatherproof drone to allow for more deployments. The drone has also been invaluable with clearing large areas very quickly with its skilled pilots and observers, allowing us to narrow land based searches down.</li>
+                <li><strong>Official Charity Registration</strong> — Registered as Charity No. 1387 on 4 June 2026.</li>
+                <li><strong>Community collaboration</strong> — Worked alongside landowners and public volunteers on major operations.</li>
+                <li><strong>Equipment &amp; capability growth</strong> — Professional thermal drone now operational, supported by community fundraising, plus 4G wildlife cameras and safety equipment.</li>
+            </ul>
+
+            <h2 class="text-3xl font-semibold text-[#4A1C6B] mt-10">Training &amp; Standards</h2>
+            <p>All team members receive structured, role-specific training. This includes search techniques, map reading and navigation (using OS maps and GPS), radio communications protocols, thermal drone operation and image interpretation, canine first aid, and safe working practices in varied Isle of Man terrain (coastal cliffs, plantations, bogs and rural areas).</p>
+            <p>We maintain the highest standards of safety, animal welfare and professionalism. Our volunteers operate under clear incident command structures. Drone pilots hold appropriate aviation certifications and we continuously invest in advanced training and equipment maintenance.</p>
+
+            <div class="mt-10 mb-6">
+                <img src="our-teams-header.png" alt="Noodle’s Canine Rescue teams" class="w-full rounded-2xl">
+            </div>
+
+            <h2 class="text-3xl font-semibold text-[#4A1C6B]">Our Teams</h2>
+
+            <div class="flex items-center gap-3 mt-8">
+                <div class="w-12 h-12 bg-[#4A1C6B]/10 rounded-2xl flex items-center justify-center shrink-0">
+                    <img src="drone-silhouette.png" alt="Thermal search drone silhouette" class="w-10 h-10 object-contain">
+                </div>
+                <h3 class="text-2xl font-semibold">Drone Team</h3>
+            </div>
+            <p class="mt-4">Our Drone Team operates professional-grade thermal imaging drones capable of detecting heat signatures from significant distances, even in dense woodland, coastal areas or complete darkness.</p>
+            <p>Key capabilities include rapid deployment for night searches, large-area coverage that would take ground teams many hours, and real-time coordination with ground and scent dog teams via radio. Pilots are trained in CAA-equivalent regulations, thermal image interpretation specific to canine detection, search grid planning, and safe operations in the unique Manx environment.</p>
+            <div class="mt-8 grid md:grid-cols-2 gap-8 items-start">
+                <figure>
+                    <img src="drone-over-moor.jpg" alt="The team drone flying low over a moorland gate and heather." class="w-full h-auto rounded-2xl" width="1600" height="900">
+                    <figcaption class="mt-3 text-sm text-gray-500">The drone over open ground.</figcaption>
+                </figure>
+                <figure>
+                    <img src="thermal-daylight.jpg" alt="Side-by-side thermal and daylight drone views of a dog in grass." class="w-full h-auto rounded-2xl" width="1600" height="654">
+                    <figcaption class="mt-3 text-sm text-gray-500">Thermal and daylight views from the drone.</figcaption>
+                </figure>
+            </div>
+
+            <h3 class="text-2xl font-semibold mt-8">Ground Search Team</h3>
+            <p>Our Ground Search Team carries out systematic physical searches on foot. Volunteers will be trained in proven search patterns, navigation, terrain assessment and radio discipline. They are experienced in the Island’s varied and sometimes hazardous landscapes — from coastal paths and cliffs to plantations, ravines and boggy moorland.</p>
+            <p>The team works in close coordination with drone intelligence, often being directed to precise locations identified from the air. All members receive canine first aid training and prioritise both human and dog safety during operations.</p>
+
+            <h3 class="text-2xl font-semibold mt-8">Dog Handling &amp; Scent Dogs</h3>
+            <p>Our Dog Handling team is just starting out, working with a training scent dog to provide precise location capability, especially in dense cover or when visual/thermal detection is limited. The team is <strong>Noodle</strong>, currently, our 18-month-old collie who is currently undergoing scent discrimination training to become a fully qualified search dog for the organisation.</p>
+            <p>Handlers are experienced in working dog training, welfare and integration with drone and ground assets. Scent dogs will add a vital layer of capability — able to detect and follow scent in conditions where technology alone may be challenged — while always operating with the highest standards of animal welfare. We will also be looking to expand our canine scent discrimination team once we have built and proven the training packs with real world searches.</p>
+            <figure class="mt-8 max-w-lg">
+                <img src="dog-handler-stream.jpg" alt="A Noodle’s Canine Rescue dog handler walking a rocky stream." class="w-full h-auto rounded-2xl" width="1200" height="1600">
+                <figcaption class="mt-3 text-sm text-gray-500">A dog handler working a stream.</figcaption>
+            </figure>
+
+            <div class="mt-10 p-6 bg-[#F8F5F2] rounded-2xl border border-gray-200">
+                <p class="font-medium text-[#4A1C6B]">Want to join one of our teams?</p>
+                <p class="text-sm mt-1">We are always looking for dedicated volunteers for ground searching, drone observation, logistics and community support roles. Volunteers will be trained. <a class="text-[#C62828] font-semibold" href="/volunteer">Register your interest</a>.</p>
+            </div>
+
+        </div>
+    </div>
+
+    <footer class="bg-[#1A1A2E] text-white/70 py-10 text-sm">
+        <div class="max-w-6xl mx-auto px-5 text-center">
+            <img src="ncr-logo.png" alt="NCR Logo" class="h-8 w-auto mx-auto mb-4">
+            <div>Noodle’s Canine Rescue IOM • Charity No. 1387</div>
+            <div class="text-xs mt-2">K. Quayle • G. Bell • <a href="tel:+447624464682" class="hover:text-white">07624 464682</a> • <a href="mailto:noodlescaninerescue@gmail.com" class="hover:text-white">noodlescaninerescue@gmail.com</a></div>
+        </div>
+    </footer>
+
+</body></html>

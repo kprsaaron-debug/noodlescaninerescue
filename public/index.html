@@ -43,10 +43,6 @@
   }
 }
     </script>
-    <script>
-        // Account emails (invites, password resets) land on the home page; send them to the site editor.
-        if (/(confirmation|recovery|invite|email_change)_token=/.test(location.hash)) location.replace('/admin/' + location.hash);
-    </script>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
