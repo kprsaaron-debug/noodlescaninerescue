@@ -8,3 +8,14 @@
   [headers.values]
     X-Robots-Tag = "noindex, nofollow"
     Cache-Control = "no-cache"
+
+# Friendly short addresses for the newer pages.
+[[redirects]]
+  from = "/drone-team"
+  to = "/drone-team.html"
+  status = 200
+
+[[redirects]]
+  from = "/pawfit"
+  to = "/pawfit.html"
+  status = 200
