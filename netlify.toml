@@ -1,6 +1,9 @@
 [build]
   publish = "public"
   command = "npm run build"
+  # Save Netlify credits: skip the build when nothing that affects the live
+  # site changed (e.g. README, notes, root-level GitHub Pages redirect files).
+  ignore = "git diff --quiet $CACHED_COMMIT_REF $COMMIT_REF -- public/ netlify/ admin-src/ lib/ db/ netlify.toml package.json package-lock.json"
 
 # Keep the dashboard out of search engines.
 [[headers]]
