@@ -5,21 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dog Rescue News Isle of Man | Noodle's NCR</title>
     <meta name="description" content="Latest news and updates from Noodle's Canine Rescue IOM: missing dog searches, charity milestones and community appeals across the Isle of Man.">
-    <link rel="canonical" href="https://noodlescaninerescue.com/news.html">
-    <link rel="icon" href="ncr-logo.png" type="image/png">
+    <link rel="canonical" href="https://noodlescaninerescue.com/news">
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
     <meta property="og:title" content="Dog Rescue News Isle of Man | Noodle's NCR">
     <meta property="og:description" content="Latest news and updates from Noodle's Canine Rescue IOM: missing dog searches, charity milestones and community appeals across the Isle of Man.">
-    <meta property="og:image" content="https://noodlescaninerescue.com/hero-bg.png">
-    <meta property="og:url" content="https://noodlescaninerescue.com/news.html">
+    <meta property="og:image" content="https://noodlescaninerescue.com/hero-bg.jpg">
+    <meta property="og:url" content="https://noodlescaninerescue.com/news">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Noodle's Canine Rescue IOM">
     <meta property="og:locale" content="en_GB">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Dog Rescue News Isle of Man | Noodle's NCR">
     <meta name="twitter:description" content="Latest news and updates from Noodle's Canine Rescue IOM: missing dog searches, charity milestones and community appeals across the Isle of Man.">
-    <meta name="twitter:image" content="https://noodlescaninerescue.com/hero-bg.png">
-    <script src="https://cdn.tailwindcss.com"></script>
+    <meta name="twitter:image" content="https://noodlescaninerescue.com/hero-bg.jpg">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="/styles.css">
     <style>
         .nav-link { transition: color 0.2s ease; }
         .nav-link:hover { color: #C62828; }
@@ -30,8 +31,8 @@
     <nav class="bg-white border-b border-gray-100 sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-5">
             <div class="flex justify-between items-center h-20">
-                <a href="index.html" class="flex items-center gap-x-3">
-                    <img src="ncr-logo.png" alt="Noodle’s Canine Rescue Logo" class="h-10 w-auto">
+                <a href="/" class="flex items-center gap-x-3">
+                    <img src="/ncr-logo-sm.png" alt="Noodle’s Canine Rescue Logo" class="h-10 w-auto">
                     <div>
                         <div class="font-semibold text-lg tracking-tight text-[#4A1C6B]">Noodle’s Canine Rescue</div>
                         <div class="text-[9px] text-gray-500 -mt-1">ISLE OF MAN • CHARITY NO. 1387</div>
@@ -39,15 +40,15 @@
                 </a>
 
                 <div class="hidden md:flex items-center gap-x-7 text-sm font-medium">
-                    <a href="index.html" class="nav-link text-gray-700">Home</a>
-                    <a href="about.html" class="nav-link text-gray-700">About Us</a>
-                    <a href="k9-first-aid.html" class="nav-link text-gray-700">K9 First Aid</a>
-                    <a href="report-missing-dog.html" class="nav-link text-gray-700">Report Missing Dog</a>
-                    <a href="news.html" class="nav-link text-[#4A1C6B] font-semibold">News &amp; Updates</a>
+                    <a href="/" class="nav-link text-gray-700">Home</a>
+                    <a href="/about" class="nav-link text-gray-700">About Us</a>
+                    <a href="/k9-first-aid" class="nav-link text-gray-700">K9 First Aid</a>
+                    <a href="/report-missing-dog" class="nav-link text-gray-700">Report Missing Dog</a>
+                    <a href="/news" class="nav-link text-[#4A1C6B] font-semibold">News &amp; Updates</a>
                 </div>
 
                 <div class="flex items-center gap-x-3">
-                    <a href="volunteer.html" class="px-5 py-2 text-sm font-semibold rounded-2xl bg-[#C62828] text-white hover:bg-[#a81f1f] transition-colors">
+                    <a href="/volunteer" class="px-5 py-2 text-sm font-semibold rounded-2xl bg-[#C62828] text-white hover:bg-[#a81f1f] transition-colors">
                         Volunteer Today
                     </a>
                     <button id="burger-btn" class="md:hidden w-10 h-10 flex items-center justify-center text-gray-600">
@@ -59,13 +60,13 @@
 
         <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
             <div class="px-5 py-4 flex flex-col gap-y-2 text-sm font-medium">
-                <a href="index.html" class="py-2 text-gray-700">Home</a>
-                <a href="about.html" class="py-2 text-gray-700">About Us</a>
-                <a href="k9-first-aid.html" class="py-2 text-gray-700">K9 First Aid</a>
-                <a href="report-missing-dog.html" class="py-2 text-gray-700">Report Missing Dog</a>
-                <a href="news.html" class="py-2 text-[#4A1C6B] font-semibold">News &amp; Updates</a>
+                <a href="/" class="py-2 text-gray-700">Home</a>
+                <a href="/about" class="py-2 text-gray-700">About Us</a>
+                <a href="/k9-first-aid" class="py-2 text-gray-700">K9 First Aid</a>
+                <a href="/report-missing-dog" class="py-2 text-gray-700">Report Missing Dog</a>
+                <a href="/news" class="py-2 text-[#4A1C6B] font-semibold">News &amp; Updates</a>
                 <div class="pt-3 border-t">
-                    <a href="volunteer.html" class="py-2 text-[#C62828] font-semibold">Volunteer Today</a>
+                    <a href="/volunteer" class="py-2 text-[#C62828] font-semibold">Volunteer Today</a>
                 </div>
             </div>
         </div>
@@ -137,7 +138,7 @@
                 <h3 class="text-2xl font-semibold mb-3">Royal Manx Agricultural Show</h3>
                 <p class="text-gray-600">We spent both days of the Royal Manx Agricultural Show at Knockaloe Farm. Visitors could see the thermal drone and handheld kit, pick up canine first aid information, and talk to the team about volunteering. Thank you to everyone who came to say hello, and to the dogs who came too.</p>
                 <figure class="mt-6 max-w-sm">
-                    <img src="royal-show-stand.jpg" alt="The Noodle’s Canine Rescue stand at the Royal Manx Agricultural Show." class="w-full h-auto rounded-2xl" width="900" height="1600">
+                    <img loading="lazy" src="/royal-show-stand.jpg" alt="The Noodle’s Canine Rescue stand at the Royal Manx Agricultural Show." class="w-full h-auto rounded-2xl" width="900" height="1600">
                     <figcaption class="mt-3 text-sm text-gray-500">Photo credit: NCR</figcaption>
                 </figure>
             </div>
@@ -149,7 +150,7 @@
                 <h3 class="text-2xl font-semibold mb-3">Rufus found</h3>
                 <p class="text-gray-600">Rufus was missing for three days. The poster below is the team’s own note from that search. It thanks the volunteers and the landowners who gave permission to search.</p>
                 <figure class="mt-6 max-w-lg">
-                    <img src="rufus-found.jpg" alt="Noodle’s Canine Rescue poster saying Rufus was found, with photos of the dogs and notes from the search." class="w-full h-auto rounded-2xl" width="1024" height="1536">
+                    <img loading="lazy" src="/rufus-found.jpg" alt="Noodle’s Canine Rescue poster saying Rufus was found, with photos of the dogs and notes from the search." class="w-full h-auto rounded-2xl" width="1024" height="1536">
                     <figcaption class="mt-3 text-sm text-gray-500">Photo credit: NCR</figcaption>
                 </figure>
             </div>
@@ -182,7 +183,7 @@
                 <h3 class="text-2xl font-semibold mb-3">Successful Recovery of Toffee – 50+ Hour Search</h3>
                 <p class="text-gray-600">Our teams led a complex search for a missing dachshund in treacherous Foxdale and St Marks Country Park terrain. Working alongside landowners and dozens of public volunteers, our thermal drone played a crucial role in locating the dog after more than 50 hours missing. The happy reunion was a powerful reminder of the value of coordinated canine search and rescue.</p>
                 <figure class="mt-6 max-w-sm">
-                    <img src="toffee-reunion.jpg" alt="Toffee the dachshund with his owners after the search." class="w-full h-auto rounded-2xl" width="1200" height="1600">
+                    <img loading="lazy" src="/toffee-reunion.jpg" alt="Toffee the dachshund with his owners after the search." class="w-full h-auto rounded-2xl" width="1200" height="1600">
                     <figcaption class="mt-3 text-sm text-gray-500">Photo credit: NCR</figcaption>
                 </figure>
                 <p class="mt-3 text-sm"><a href="https://www.bbc.com/news/articles/c2052dk13z6o" target="_blank" class="text-[#C62828] font-semibold">Read the BBC coverage →</a></p>
@@ -224,7 +225,7 @@
                 <h3 class="text-2xl font-semibold mb-3">Noodle’s Scent Dog Training Progress &amp; Team Development</h3>
                 <p class="text-gray-600">Our collie Noodle continues her scent discrimination training and is making excellent progress toward becoming a fully qualified search dog for the organisation. Meanwhile, drone pilots and ground team members are undertaking ongoing certifications and practical exercises to maintain the highest operational standards.</p>
                 <figure class="mt-6 max-w-sm">
-                    <img src="noodle.jpg" alt="Noodle, the black and white collie the charity is named after, sitting on grass." class="w-full h-auto rounded-2xl" width="1200" height="1600">
+                    <img loading="lazy" src="/noodle.jpg" alt="Noodle, the black and white collie the charity is named after, sitting on grass." class="w-full h-auto rounded-2xl" width="1200" height="1600">
                     <figcaption class="mt-3 text-sm text-gray-500">Photo credit: NCR</figcaption>
                 </figure>
             </div>
@@ -234,7 +235,7 @@
 
     <footer class="bg-[#1A1A2E] text-white/70 py-10 text-sm">
         <div class="max-w-6xl mx-auto px-5 text-center">
-            <img src="ncr-logo.png" alt="NCR Logo" class="h-8 w-auto mx-auto mb-4">
+            <img loading="lazy" src="/ncr-logo-sm.png" alt="NCR Logo" class="h-8 w-auto mx-auto mb-4">
             <div>Noodle’s Canine Rescue IOM • Charity No. 1387</div>
             <div class="text-xs mt-2">K. Quayle • G. Bell • <a href="tel:+447624464682" class="hover:text-white">07624 464682</a> • <a href="mailto:noodlescaninerescue@gmail.com" class="hover:text-white">noodlescaninerescue@gmail.com</a></div>
         </div>
